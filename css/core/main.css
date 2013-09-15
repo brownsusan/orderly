@@ -15,6 +15,28 @@ input[type="email"], input[type="number"], input[type="password"], input[type="t
 
 }
 
+button, input[type=button], .button {
+	border: none;
+	border-radius: 2px;
+	color: #444;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+input[type=submit], .button-submit {
+	background: #c0eba5;
+	background: -moz-linear-gradient(top, #c0eba5 18%, #88a675 100%);
+	background: -ms-linear-gradient(top, #c0eba5 18%, #88a675 100%);
+	background: -o-linear-gradient(top, #c0eba5 18%, #88a675 100%);
+	background: -webkit-linear-gradient(top, #c0eba5 18%, #88a675 100%);
+	background: linear-gradient(top, #c0eba5 18%, #88a675 100%);
+	border: none;
+	border-radius: 2px;
+	color: #000000;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
 #main {
 	background: #e6e6e6;
 	width: 960px;
