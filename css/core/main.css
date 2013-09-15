@@ -53,17 +53,18 @@ input[type=submit], .button-submit {
 	background: linear-gradient(top, #c0eba5 18%, #88a675 100%);
 	border: none;
 	border-radius: 2px;
-	color: #000;
+	color: #444;
 	cursor: pointer;
+	font-weight: bold;
 	white-space: nowrap;
 }
 
 input[type=submit]:hover, .button-submit:hover {
-
+	color: #000;
 }
 
 input[type=submit]:active, .button-submit:active {
-
+	
 }
 
 #main {
