@@ -63,7 +63,7 @@ input[type=submit]:hover, .button-submit:hover {
 }
 
 input[type=submit]:active, .button-submit:active {
-	background: #A8CE91;
+	background: #a8ce91;
 	box-shadow: inset 0 0 1em rgba(0,0,0,.4);
 }
 
