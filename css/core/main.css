@@ -26,15 +26,22 @@ button, input[type=button], .button {
 	border-radius: 2px;
 	color: #444;
 	cursor: pointer;
+	font-weight: bold;
 	white-space: nowrap;
 }
 
-button:active, input[type=button]:active, .button:active {
-
+button:hover, input[type=button]:hover, .button:hover {
+	color: #000;
 }
 
-button:hover, input[type=button]:hover, .button:hover {
-
+button:active, input[type=button]:active, .button:active {
+	background: #b3b3b3;
+	background: -moz-linear-gradient(top, #b3b3b3 0%, #d4d4d4 60%, #e6e6e6 100%); 
+	background: -webkit-linear-gradient(top, #b3b3b3 0%,#d4d4d4 60%,#e6e6e6 100%); 
+	background: -o-linear-gradient(top, #b3b3b3 0%,#d4d4d4 60%,#e6e6e6 100%); 
+	background: -ms-linear-gradient(top, #b3b3b3 0%,#d4d4d4 60%,#e6e6e6 100%); 
+	background: linear-gradient(to bottom, #b3b3b3 0%,#d4d4d4 60%,#e6e6e6 100%);
+	color: #000;
 }
 
 input[type=submit], .button-submit {
@@ -46,16 +53,16 @@ input[type=submit], .button-submit {
 	background: linear-gradient(top, #c0eba5 18%, #88a675 100%);
 	border: none;
 	border-radius: 2px;
-	color: #000000;
+	color: #000;
 	cursor: pointer;
 	white-space: nowrap;
 }
 
-input[type=submit]:active, .button-submit:active {
+input[type=submit]:hover, .button-submit:hover {
 
 }
 
-input[type=submit]:hover, .button-submit:hover {
+input[type=submit]:active, .button-submit:active {
 
 }
 
