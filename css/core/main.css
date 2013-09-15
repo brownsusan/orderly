@@ -68,6 +68,18 @@ input[type=submit]:active, .button-submit:active {
 	box-shadow: inset 0 0 1em rgba(0,0,0,.4);
 }
 
+a {
+
+}
+
+a:hover {
+
+}
+
+a:active {
+
+}
+
 #main {
 	background: #e6e6e6;
 	width: 960px;
