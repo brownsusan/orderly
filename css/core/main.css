@@ -7,8 +7,8 @@ html, body {
 
 header {
 	background: #a8ce98;
-	height: 50px;
-	line-height: 50px;
+	height: 40px;
+	line-height: 40px;
 	width: 100%;
 }
 
@@ -77,6 +77,12 @@ input[type=submit]:active, .button-submit:active {
 	margin: 0 auto;
 }
 
-.login {
+.header-home {
+	float: left;
+	margin-left: 20px;
+}
+
+.header-login {
 	float: right;
+	margin-right: 20px;
 }
