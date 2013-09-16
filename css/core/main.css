@@ -169,7 +169,7 @@
 }
 
 .status.active {
-	background: #87a67a;
+	background: #9ac67f;
 }
 
 .status.urgent {
@@ -177,7 +177,7 @@
 }
 
 .status.delay {
-	background: #5E7351;
+	background: #3C731A;
 }
 
 .status.done {
