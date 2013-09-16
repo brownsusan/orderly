@@ -1,0 +1,34 @@
+/** Overrides of specific styles */
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.center-parent {
+	text-align: center;
+}
+
+.center-child {
+	margin: 0 auto;
+}
+
+.padding {
+	padding: 30px;
+}
+
+.clear {
+	clear: both;
+}
+
+.content-spacer {
+	clear: both;
+	height: 30px;
+}
