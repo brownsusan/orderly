@@ -40,13 +40,17 @@
 
 .home-hero {
 	background: #111111 url('/img/tweed_@2X.png');
-	height: 300px;
 	text-align: center;
 }
 
 .home-hero-title {
 	color: #a8ce98;
 	font-size: 1.2em;
+}
+
+.home-hero-preview {
+	background: url('/img/cta.png') 50% no-repeat;
+	height: 192px;
 }
 
 .home-sign-up {
