@@ -36,6 +36,31 @@
 	padding-right: 100px;
 }
 
+/** Home */
+
+.home-hero {
+	background: #111111 url('/img/tweed_@2X.png');
+	height: 300px;
+	text-align: center;
+}
+
+.home-hero-title {
+	color: #a8ce98;
+	font-size: 1.2em;
+}
+
+.home-sign-up {
+	position: relative;
+	top: -30px;
+}
+
+.home-feature {
+	float: left;
+	width: 300px;
+	padding: 10px;
+	text-align: center;
+}
+
 /** Project */
 
 .project-create-container {
