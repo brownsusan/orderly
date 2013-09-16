@@ -164,15 +164,15 @@
 }
 
 .status.urgent {
-	background: #b91512;
+	background: #EE6545;
 }
 
 .status.delay {
-	background: #ff8437;
+	background: #5E7351;
 }
 
 .status.done {
-	background: #e9d94d;
+	background: #444444;
 }
 
 .button-status {
