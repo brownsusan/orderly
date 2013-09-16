@@ -17,6 +17,13 @@
 	margin-left: 20px;
 }
 
+.header-icon {
+	background: url('/img/icon.png');
+	float: left;
+	height: 40px;
+	width: 40px;
+}
+
 .header-login {
 	float: right;
 	margin-right: 20px;
@@ -192,11 +199,23 @@
 }
 
 .icon-edit {
+	background-image: url('/img/edit-icon.png');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	cursor: pointer;
 	float: right;
+	height: 50px;
+	width: 28px;
 	margin-right: 10px;
 }
 
-.icon-remove {
+.icon-delete {
+	background-image: url('/img/delete-icon.png');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	cursor: pointer;
 	float: right;
+	height: 50px;
+	width: 28px;
 	margin-right: 10px;
 }
