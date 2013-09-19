@@ -29,7 +29,7 @@ $(document).ready(function() {
 
 	// create the landing page
 	function loadLanding() {
-
+		console.log('user not logged in')
 		console.log("The landing page will be loaded here");
 
 		// creat all the page elements
@@ -80,7 +80,7 @@ $(document).ready(function() {
 
 	// create the application page
 	function loadApplication() {
-
+		console.log('user is logged in')
 		console.log("The application will be loaded here");
 
 		$('#logout_submit').click(function() {
