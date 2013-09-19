@@ -82,8 +82,9 @@ $(document).ready(function() {
 	function loadApplication() {
 
 		console.log("The application will be loaded here");
-		
-		$('#logout_submit').click(function(){
+
+		$('#logout_submit').click(function() {
+			
 			// log the user out
 
 			$.ajax({
@@ -94,6 +95,7 @@ $(document).ready(function() {
 					console.log(response);
 				}
 			});
+			
 		});
 
 	}
