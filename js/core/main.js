@@ -82,6 +82,19 @@ $(document).ready(function() {
 	function loadApplication() {
 
 		console.log("The application will be loaded here");
+		
+		$('#logout_submit').click(function(){
+			// log the user out
+
+			$.ajax({
+				url : "xhr/logout.php",
+				type : "get",
+				dataType : "json",
+				success : function(response) {
+					console.log(response);
+				}
+			});
+		});
 
 	}
 
