@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var init = function() {
+	function init() {
 
 		// check if the user is logged in
 		$.ajax({
@@ -20,6 +20,7 @@ $(document).ready(function() {
 				else {
 					loadLanding();
 				}
+				
 			}
 		});
 
@@ -29,12 +30,13 @@ $(document).ready(function() {
 
 	// create the landing page
 	function loadLanding() {
-		console.log('user not logged in')
+
+		console.log("user is not logged in");
 		console.log("The landing page will be loaded here");
 
-		// creat all the page elements
+		// create all the page elements
 
-		// add the events to the elements
+		// add the event listener to the elements
 
 		$('#login_submit').click(function() {
 
@@ -80,11 +82,16 @@ $(document).ready(function() {
 
 	// create the application page
 	function loadApplication() {
-		console.log('user is logged in')
+
+		console.log("user is logged in");
 		console.log("The application will be loaded here");
 
+		// create all the page elements
+
+		// add the event listener to the elements
+
 		$('#logout_submit').click(function() {
-			
+
 			// log the user out
 
 			$.ajax({
@@ -95,7 +102,7 @@ $(document).ready(function() {
 					console.log(response);
 				}
 			});
-			
+
 		});
 
 	}
