@@ -17,15 +17,10 @@
 				<div class="header-icon"></div>
 				<span>Orderly</span>
 			</div>
-
+			<!-- THIS DIV NEEDS TO BE POPULATED WITH THE USERNAME LINK-->
 			<div class="header-login">
-				<input type="text" id="login_username" placeholder="Username" />
-				<input type="password" id="login_password" placeholder="Password" />
-				<button id="login_submit">
-					Log In
-				</button>
-				
-				<button id="logout_submit">Log Out</button>
+				<span id="header_user">USERNAME HERE</span>
+				<button id="header_logout">Log Out</button>
 			</div>
 
 		</header>
@@ -36,12 +31,12 @@
 
 			<!-- PROJECTS FOLLOW -->
 
+			<!-- PROJECT CREATE AND EDIT --> 
 			<div class="project-create-container">
 				<div class="project-create-heading">
 					<div class="status active"></div>
 					<span class="project-create-title">Project Name</span>
 					<span class="icon-delete"></span>
-					<span class="icon-edit"></span>
 				</div>
 
 				<div class="padding">
@@ -57,7 +52,6 @@
 						<span>Project Description</span>
 						<br />
 						<textarea class="project-create-description"></textarea>																																																																															
-
 
 					</div>
 
@@ -99,39 +93,224 @@
 				</div>
 
 			</div>
+			
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
 
-			<div class="content-spacer"></div>
+			<!-- PROJECT DETAILS --> 
+			<div class="project-create-container">
+				<div class="project-create-heading">
+					<div class="status active"></div>
+					<span class="project-create-title">Project Name</span>
+					<span class="icon-delete"></span>
+					<span class="icon-edit"></span>
+				</div>
 
-			<div class="task-item">
+				<div class="padding">
+
+					<div class="left">
+
+						<span>Task Name</span>
+						<br />
+						<span class="project-create-name">NAME HERE</span>
+
+						<div class="content-spacer"></div>
+
+						<span>Project Description</span>
+						<br />
+						<span class="project-create-description">DESCRIPTION HERE</span>																																																																															
+
+
+					</div>
+
+					<div class="right">
+
+						<span>Due Date</span>
+						<br />
+						<span type="text" class="project-create-date">DUE DATE HERE</span>
+
+						<div class="content-spacer"></div>
+
+						<span>Status</span>
+						<br />
+						<button class="button-status">
+							<div class="status active"></div>
+							<span>Active</span>
+						</button>
+						<button class="button-status">
+							<div class="status urgent"></div>
+							<span>Urgent</span>
+						</button>
+						<button class="button-status">
+							<div class="status delay"></div>
+							<span>Delay</span>
+						</button>
+						<button class="button-status">
+							<div class="status done"></div>
+							<span>Done</span>
+						</button>
+
+					</div>
+
+					<div class="clear"></div>
+
+				</div>
+
+			</div>
+
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+
+			<!-- PROJECT ITEMS --> 
+
+			<div class="project-item">
 				<div class="status active"></div>
-				<span class="task-name">Task Name</span>
+				<span class="project-name">Project Name</span>
 				<span class="icon-delete"></span>
 				<span class="icon-edit"></span>
 			</div>
 
-			<div class="task-item">
+			<div class="project-item">
 				<div class="status urgent"></div>
-				<span class="task-name">Task Name</span>
+				<span class="project-name">Project Name</span>
 				<span class="icon-delete"></span>
 				<span class="icon-edit"></span>
 			</div>
 
-			<div class="task-item">
+			<div class="project-item">
 				<div class="status delay"></div>
-				<span class="task-name">Task Name</span>
+				<span class="project-name">Project Name</span>
 				<span class="icon-delete"></span>
 				<span class="icon-edit"></span>
 			</div>
 
-			<div class="task-item">
+			<div class="project-item">
 				<div class="status done"></div>
-				<span class="task-name">Task Name</span>
+				<span class="project-name">Project Name</span>
 				<span class="icon-delete"></span>
 				<span class="icon-edit"></span>
 			</div>
+
+			<!-- PROJECTS END -->
+
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
 
 			<!-- TASKS FOLLOW -->
 
+			<!-- TASK CREATE AND EDIT --> 
+			<div class="center-parent">
+
+				<div class="list-header">
+					<button class="right">
+						Add Task
+					</button>
+					<span class="list-heading">Tasks for Project Name</span>
+				</div>
+
+				<div class="task-create-container center-child">
+
+					<div class="status active"></div>
+					<div class="task-create-heading">
+						<span class="task-create-title">New Task</span>
+						<span class="icon-delete"></span>
+						<span class="icon-edit"></span>
+					</div>
+
+					<div class="padding">
+
+						<div class="left">
+
+							<span>Task Name</span>
+							<br />
+							<input type="text" class="task-create-name" />
+
+							<div class="content-spacer"></div>
+
+							<span>Task Description</span>
+							<br />
+							<textarea class="task-create-description"></textarea>																																																																																					
+
+
+						</div>
+
+						<div class="right">
+
+							<span>Due Date</span>
+							<br />
+							<input type="text" class="task-create-date" />
+
+							<div class="content-spacer"></div>
+
+							<span>Status</span>
+							<br />
+							<button class="button-status">
+								<div class="status active"></div>
+								<span>Active</span>
+							</button>
+							<button class="button-status">
+								<div class="status urgent"></div>
+								<span>Urgent</span>
+							</button>
+							<button class="button-status">
+								<div class="status delay"></div>
+								<span>Delay</span>
+							</button>
+							<button class="button-status">
+								<div class="status done"></div>
+								<span>Done</span>
+							</button>
+
+						</div>
+
+						<div class="clear"></div>
+						<button class="create-save">
+							Save
+						</button>
+						<div class="clear"></div>
+
+					</div>
+
+				</div>
+
+			</div>
+			
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			
+			<!-- TASK DETAILS -->
 			<div class="center-parent">
 
 				<div class="list-header">
@@ -208,7 +387,18 @@
 
 			</div>
 
-			<div class="content-spacer"></div>
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+
+			<!-- TASK ITEMS -->
 
 			<div class="task-item">
 				<div class="status active"></div>
@@ -237,6 +427,8 @@
 				<span class="icon-delete"></span>
 				<span class="icon-edit"></span>
 			</div>
+			
+			<!-- TASKS END -->
 
 		</div>
 
