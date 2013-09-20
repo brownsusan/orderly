@@ -106,5 +106,5 @@ $(document).ready(function() {
 		});
 
 	}
-
+	
 });
