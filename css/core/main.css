@@ -101,14 +101,15 @@
 
 /** Project */
 
-.project-create-container {
+/* Project Create AND Edit */
+.project-submit-container {
 	background: #f0f0f0;
 	box-shadow: 0 0.2em 0.35em rgba(0, 0, 0, 0.4);
 	text-align: left;
 	width: 100%;
 }
 
-.project-create-heading {
+.project-submit-heading {
 	background: #e6e6e6;
 	background: -moz-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
 	background: -webkit-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
@@ -119,22 +120,23 @@
 	width: 100%;
 }
 
-.project-create-title {
+.project-submit-title {
 	font-weight: bold;
 	margin-left: 20px;
 }
 
-.project-create-name, .project-create-description {
+.project-submit-name, .project-submit-description {
 	width: 650px;
 }
 
-.project-create-description {
+.project-submit-description {
 	height: 115px;
 }
 
-.project-create-date {
+.project-submit-date {
 	width: 196px;
 }
+/* End Project Create AND Edit */
 
 .project-item {
 	background: #e6e6e6;
@@ -155,15 +157,15 @@
 }
 
 /** Task */
-
-.task-create-container {
+/* Task Create AND Edit */
+.task-submit-container {
 	background: #f0f0f0;
 	box-shadow: 0 0.2em 0.35em rgba(0, 0, 0, 0.4);
 	text-align: left;
 	width: 95%;
 }
 
-.task-create-heading {
+.task-submit-heading {
 	background: #e6e6e6;
 	background: -moz-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
 	background: -webkit-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
@@ -174,22 +176,23 @@
 	width: 100%;
 }
 
-.task-create-title {
+.task-submit-title {
 	font-weight: bold;
 	margin-left: 20px;
 }
 
-.task-create-name, .task-create-description {
+.task-submit-name, .task-submit-description {
 	width: 600px;
 }
 
-.task-create-description {
+.task-submit-description {
 	height: 115px;
 }
 
-.task-create-date {
+.task-submit-date {
 	width: 196px;
 }
+/* End Task Create AND Edit */
 
 .task-item {
 	background: #e6e6e6;
@@ -222,7 +225,7 @@
 	font-size: 1.25em;
 }
 
-.create-save {
+.submit-save {
 	width: 200px;
 }
 
