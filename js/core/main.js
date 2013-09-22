@@ -1,4 +1,5 @@
-$(document).ready(function() {
+	var landingTemplate ;
+	var applicationTemplate ;
 
 	function init() {
 
@@ -36,8 +37,11 @@ $(document).ready(function() {
 
 		// create all the page elements
 		$.get("templates/landing.html", function(template){
-			var header = $(template).find('#landing-header').html();
-			var main = $(template).find('#landing-main').html();
+		
+			landingTemplate = template;
+		
+			var header = $(landingTemplate).find('#landing-header').html();
+			var main = $(landingTemplate).find('#landing-main').html();
 			
 			/*
 			Do not need clears because .html() replaces the html
@@ -132,13 +136,18 @@ $(document).ready(function() {
 		// create all the page elements
 		//?2 is for forcing it to reload - remove before submitting - clear cache to remove the need to reload
 		//HACK
-		$.get("templates/app.html?2", function(template){
+		$.get("templates/app.html?3", function(template){
+			applicationTemplate = template;
 			
-			var header = $(template).find('#application-header').html();
+			var header = $(applicationTemplate).find('#application-header').html();
+
+			var taskSubmit = $(applicationTemplate).find('#application-task-submit').html();
+			var taskDetail = $(applicationTemplate).find('#application-task-detail').html();
+			var taskItem = $(applicationTemplate).find('#application-task-item').html();
 			
 			//replace the header
 			$('header').html(header);
-			
+						
 			loadProjects();
 			
 			// add the event listener to the elements
@@ -168,7 +177,7 @@ $(document).ready(function() {
 	
 			});
 			
-		});
+		});//end get template function
 		
 
 
@@ -176,15 +185,30 @@ $(document).ready(function() {
 	
 	function loadProjects(){
 	
+		var projectSubmit = $(applicationTemplate).find('#application-project-submit').html();
+		var projectDetail = $(applicationTemplate).find('#application-project-detail').html();
+		var projectItem = $(applicationTemplate).find('#application-project-item').html();
+		
+		$.template('projectItemTemplate', projectItem);
+		
 		// clear the main
-		$('#main').html('');
+		$('#main').html('<br />');
 	
 		$.ajax({
 			url : "xhr/get_projects.php",
 			type : "get",
 			dataType : "json",
 			success : function(response) {
-				console.log(response);
+			
+				for(var i=0, j=response.projects.length; i<j; i++){
+					console.log(response.projects[i].projectName);
+					
+					var projectItemHtml = $.render(response.projects[i], 'projectItemTemplate');
+					
+					$('#main').append(projectItemHtml);
+					
+				}
+
 			}
 		});
 	}
@@ -205,6 +229,4 @@ $(document).ready(function() {
 				console.log(response);
 			}
 		});
-	}
-
-});
+	};
