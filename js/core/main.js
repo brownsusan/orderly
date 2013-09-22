@@ -1,5 +1,6 @@
-	var landingTemplate ;
-	var applicationTemplate ;
+	var landingTemplate;
+	var applicationTemplate;
+	var user;
 
 	function init() {
 
@@ -14,6 +15,8 @@
 
 				// if the user is logged in
 				if (response.user) {
+					console.log(response.user);
+					user=response.user;
 					loadApplication();
 				}
 
@@ -145,8 +148,11 @@
 			var taskDetail = $(applicationTemplate).find('#application-task-detail').html();
 			var taskItem = $(applicationTemplate).find('#application-task-item').html();
 			
+			$.template('headerTemplate', header);
+			var headerHtml = $.render(user, 'headerTemplate');
+			
 			//replace the header
-			$('header').html(header);
+			$('header').html(headerHtml);
 						
 			loadProjects();
 			
