@@ -39,7 +39,7 @@
 		console.log("The landing page will be loaded here");
 
 		// create all the page elements
-		$.get("templates/landing.html", function(template){
+		$.get("templates/landing.html?2", function(template){
 		
 			landingTemplate = template;
 		
@@ -100,6 +100,7 @@
 					
 						// if the user logged in
 						if (response.user) {
+							user = response.user;
 							loadApplication();
 						}
 		
@@ -117,12 +118,76 @@
 				
 				// make the variables
 				var firstName = $('#home_firstName').val();
+				var lastName = $('#home_lastName').val();
+				var username = $('#home_username').val();
+				var email = $('#home_email').val();
+				var pass = $('#home_pass').val();
+				var confirmPass = $('#home_confirmPass').val();
 				
 				// validate the variable
+				var valid = true;
+	
+				if (firstName.length == 0) {
+					valid = false;
+					// show the user an error
+				}
+				if (lastName.length == 0) {
+					valid = false;
+					// show the user an error
+				}
+				if (username.length == 0) {
+					valid = false;
+					// show the user an error
+				}
+				if (email.length == 0) {
+					valid = false;
+					// show the user an error
+				}
+				if (pass.length < 6) {
+					valid = false;
+					// show the user an error
+				}
+				if (confirmPass.length < 6) {
+					valid = false;
+					// show the user an error
+				}
+				
+				if (pass != confirmPass) {
+					valid = false;
+					//Show the user an error
+				}
+	
+				if (!valid) {
+					return;
+				}
 				
 				// ajax request to send the variables
+								$.ajax({
+					url : "xhr/register.php",
+					type : "post",
+					dataType : "json",
+					data : {
+					 	'first_name': firstName,
+						'last_name': lastName,
+						'username': username,
+						'email': email,
+						'password': pass
+					},
+					success : function(response) {
+					
+						// if the user signed up
+						if (response.user) {
+							loadApplication();
+						}
+		
+						// if the user did not sign up
+						else {
+							// show error
+						}
+	
+					}
+				});
 				
-				// use login as an example
 				
 			});
 			
@@ -179,13 +244,12 @@
 						}
 						
 					}
+					
 				});
 	
 			});
 			
 		});//end get template function
-		
-
 
 	}
 	
