@@ -67,12 +67,12 @@
 	
 	
 	<script type="text/template" id="application-project-submit">
-		<div class="project-submit-container hidden">
+		<div class="project-submit-container project-container hidden">
 			<input type="hidden" class="data-id" value="{{=id}}" />
 			<div class="project-submit-heading">
 				<div class="status {{=status}}"></div>
 				<span class="project-submit-title">{{=projectName}}</span>
-				<span class="icon-delete"></span>
+				<span class="icon-delete project-delete"></span>
 			</div>
 	
 			<div class="padding">
@@ -133,7 +133,7 @@
 	
 	
 	<script type="text/template" id="application-project-detail">
-		<div class="project-detail-container">
+		<div class="project-detail-container project-container">
 			<input type="hidden" class="data-id" value="{{=id}}" />
 			<div class="project-detail-heading">
 				<div class="status {{=status}}"></div>
