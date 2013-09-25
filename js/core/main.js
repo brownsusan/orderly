@@ -342,8 +342,7 @@ function loadApplication() {
 
 function loadProjects() {
 
-	var projectSubmit = $(applicationTemplate).find('#application-project-submit').html();
-	var projectDetail = $(applicationTemplate).find('#application-project-detail').html();
+
 	var projectItem = $(applicationTemplate).find('#application-project-item').html();
 
 	$.template('projectItemTemplate', projectItem);
@@ -372,10 +371,15 @@ function loadProjects() {
 
 function loadTasks(projectID) {
 
+	var projectSubmit = $(applicationTemplate).find('#application-project-submit').html();
+	var projectDetail = $(applicationTemplate).find('#application-project-detail').html();
+
 	var taskSubmit = $(applicationTemplate).find('#application-task-submit').html();
 	var taskDetail = $(applicationTemplate).find('#application-task-detail').html();
 	var taskItem = $(applicationTemplate).find('#application-task-item').html();
 
+	$.template('projectSubmitTemplate', projectSubmit);
+	$.template('projectDetailTemplate', projectDetail);
 	$.template('taskItemTemplate', taskItem);
 
 	// clear the main
@@ -389,6 +393,12 @@ function loadTasks(projectID) {
 			'projectID' : projectID
 		},
 		success : function(response) {
+			// render the project details view
+			var projectSubmitHtml = $.render(response.projects[0], 'projectSubmitTemplate');
+			$('#main').append(projectSubmitHtml);
+			
+			var projectDetailHtml = $.render(response.projects[0], 'projectDetailTemplate');
+			$('#main').append(projectDetailHtml);
 
 			$.ajax({
 				url : "xhr/get_tasks.php",
@@ -398,8 +408,6 @@ function loadTasks(projectID) {
 					'projectID' : projectID
 				},
 				success : function(response) {
-
-					// render the project details view
 
 					// render all the tasks
 					for (var i = 0, j = response.tasks.length; i < j; i++) {

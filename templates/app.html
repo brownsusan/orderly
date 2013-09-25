@@ -70,8 +70,8 @@
 		<div class="project-submit-container">
 			
 			<div class="project-submit-heading">
-				<div class="status active"></div>
-				<span class="project-submit-title">Project Name</span>
+				<div class="status {{=status}}"></div>
+				<span class="project-submit-title">{{=projectName}}</span>
 				<span class="icon-delete"></span>
 			</div>
 	
@@ -81,13 +81,13 @@
 	
 					<span>Project Name</span>
 					<br />
-					<input type="text" class="project-submit-name" />
+					<input type="text" class="project-submit-name" value="{{=projectName}}"/>
 	
 					<div class="content-spacer"></div>
 	
 					<span>Project Description</span>
 					<br />
-					<textarea class="project-submit-description"></textarea>																																																																															
+					<textarea class="project-submit-description">{{=projectDescription}}</textarea>																																																																															
 	
 				</div>
 	
@@ -95,7 +95,7 @@
 	
 					<span>Due Date</span>
 					<br />
-					<input type="text" class="project-submit-date" />
+					<input type="text" class="project-submit-date" value="{{=dueDate}}"/>
 	
 					<div class="content-spacer"></div>
 	
@@ -110,8 +110,8 @@
 						<span>Urgent</span>
 					</button>
 					<button class="button-status">
-						<div class="status delay"></div>
-						<span>Delay</span>
+						<div class="status delayed"></div>
+						<span>Delayed</span>
 					</button>
 					<button class="button-status">
 						<div class="status done"></div>
@@ -135,8 +135,8 @@
 	<script type="text/template" id="application-project-detail">
 		<div class="project-submit-container">
 			<div class="project-submit-heading">
-				<div class="status active"></div>
-				<span class="project-submit-title">Project Name</span>
+				<div class="status {{=status}}"></div>
+				<span class="project-submit-title">{{=projectName}}</span>
 				<span class="icon-delete"></span>
 				<span class="icon-edit"></span>
 			</div>
@@ -145,15 +145,15 @@
 
 				<div class="left">
 
-					<span>Task Name</span>
+					<span>Project Name</span>
 					<br />
-					<span class="project-submit-name">NAME HERE</span>
+					<span class="project-submit-name">{{=projectName}}</span>
 
 					<div class="content-spacer"></div>
 
 					<span>Project Description</span>
 					<br />
-					<span class="project-submit-description">DESCRIPTION HERE</span>																																																																															
+					<span class="project-submit-description">{{=projectDescription}}</span>																																																																															
 
 				</div>
 
@@ -161,7 +161,7 @@
 
 					<span>Due Date</span>
 					<br />
-					<span type="text" class="project-submit-date">DUE DATE HERE</span>
+					<span type="text" class="project-submit-date">{{=dueDate}}</span>
 
 					<div class="content-spacer"></div>
 
@@ -176,8 +176,8 @@
 						<span>Urgent</span>
 					</button>
 					<button class="button-status">
-						<div class="status delay"></div>
-						<span>Delay</span>
+						<div class="status delayed"></div>
+						<span>Delayed</span>
 					</button>
 					<button class="button-status">
 						<div class="status done"></div>
@@ -258,8 +258,8 @@
 							<span>Urgent</span>
 						</button>
 						<button class="button-status">
-							<div class="status delay"></div>
-							<span>Delay</span>
+							<div class="status delayed"></div>
+							<span>Delayed</span>
 						</button>
 						<button class="button-status">
 							<div class="status done"></div>
@@ -337,8 +337,8 @@
 							<span>Urgent</span>
 						</button>
 						<button class="button-status">
-							<div class="status delay"></div>
-							<span>Delay</span>
+							<div class="status delayed"></div>
+							<span>Delayed</span>
 						</button>
 						<button class="button-status">
 							<div class="status done"></div>
