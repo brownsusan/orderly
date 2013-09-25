@@ -17,24 +17,20 @@
 				<div id="header_account_display">
 					
 					<div>
-						<label for="account_firstName">First Name:</label>
-						<label id="account_firstName">{{=user_n}}</label>
+						<label for="account_display_firstName">First Name:</label>
+						<label id="account_display_firstName">{{=first_name}}</label>
 					</div>
 					<div>
-						<label for="account_lastName">Last Name:</label>
-						<label id="account_lastName">LN HERE</label>
+						<label for="account_display_lastName">Last Name:</label>
+						<label id="account_display_lastName">{{=last_name}}</label>
 					</div>
 					<div>
-						<label for="account_username">Username:</label>
-						<label id="account_username">UN HERE</label>
+						<label for="account_display_email">Email Address:</label>
+						<label id="account_display_email">{{=email}}</label>
 					</div>
 					<div>
-						<label for="account_email">Email Address:</label>
-						<label id="account_email">EMAIL HERE</label>
-					</div>
-					<div>
-						<label for="account_pass">Password:</label>
-						<label id="account_pass" >PW HERE</label>
+						<label for="account_display_pass">Password:</label>
+						<label id="account_display_pass" >PW HERE</label>
 					</div>
 					<button id="account_edit" class="button-submit">
 							Edit
@@ -45,28 +41,24 @@
 				<div id="header_account_edit">
 					
 					<div>
-						<label for="account_firstName">First Name</label>
-						<input id="account_firstName" type="text" value="{{=user_n}}">
+						<label for="account_edit_firstName">First Name</label>
+						<input id="account_edit_firstName" type="text" value="{{=first_name}}">
 					</div>
 					<div>
-						<label for="account_lastName">Last Name</label>
-						<input id="account_lastName" type="text" value="LN HERE">
+						<label for="account_edit_lastName">Last Name</label>
+						<input id="account_edit_lastName" type="text" value="{{=last_name}}">
 					</div>
 					<div>
-						<label for="account_username">Username</label>
-						<input id="account_username" type="text" value="UN HERE">
+						<label for="account_edit_email">Email Address</label>
+						<input id="account_edit_email" type="email" value="{{=email}}">
 					</div>
 					<div>
-						<label for="account_email">Email Address</label>
-						<input id="account_email" type="email" value="EMAIL HERE">
+						<label for="account_edit_pass">Password</label>
+						<input id="account_edit_pass" type="password" value="PW HERE">
 					</div>
 					<div>
-						<label for="account_pass">Password</label>
-						<input id="account_pass" type="password" value="PW HERE">
-					</div>
-					<div>
-						<label for="account_confirmPass">Confirm Password</label>
-						<input id="account_confirmPass" type="password" value="PW HERE">
+						<label for="account_edit_confirmPass">Confirm Password</label>
+						<input id="account_edit_confirmPass" type="password" value="PW HERE">
 					</div>
 					<button id="account_save" class="button-submit">
 							Save

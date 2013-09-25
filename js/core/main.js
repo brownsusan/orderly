@@ -257,10 +257,84 @@
 	        $('#header_user').click(function () {
 	            $('#header_account').toggle();
 	        });
-	        
-	        $('#account_edit').click(function(){
-	        	$('#header_account_display').hide();
-	        	$('#header_account_edit').show();
+
+	        $('#account_edit').click(function () {
+	            $('#header_account_display').hide();
+	            $('#header_account_edit').show();
+	        });
+
+	        $('#account_save').click(function () {
+	            $('#header_account_display').show();
+	            $('#header_account_edit').hide();
+
+	            // make the variables
+	            var firstName = $('#account_edit_firstName').val();
+	            var lastName = $('#account_edit_lastName').val();
+	            var email = $('#account_edit_email').val();
+	            var pass = $('#account_edit_pass').val();
+	            var confirmPass = $('#account_edit_confirmPass').val();
+
+
+	            // validate the variable
+	            var valid = true;
+
+	            if (firstName.length == 0) {
+	                valid = false;
+	                // show the user an error
+	            }
+	            if (lastName.length == 0) {
+	                valid = false;
+	                // show the user an error
+	            }
+	            if (email.length == 0) {
+	                valid = false;
+	                // show the user an error
+	            }
+	            if (pass.length < 6) {
+	                valid = false;
+	                // show the user an error
+	            }
+	            if (confirmPass.length < 6) {
+	                valid = false;
+	                // show the user an error
+	            }
+
+	            if (pass != confirmPass) {
+	                valid = false;
+	                //Show the user an error
+	            }
+
+	            if (!valid) {
+	                return;
+	            }
+
+
+	            $.ajax({
+	                url: "xhr/update_user.php",
+	                type: "post",
+	                dataType: "json",
+	                data: {
+					   'first_name': firstName,
+					   'last_name': lastName,
+					   'email': email,
+					   'password': pass
+	                },
+	                success: function (response) {
+
+	                    // if the user logged in
+	                    if (response.user) {
+	                    	//
+	                    }
+
+	                    // if the user did not log in
+	                    else {
+	                        // show error
+	                    }
+
+	                }
+	            });
+
+
 	        });
 
 	        $('#header_logout').click(function () {
