@@ -181,7 +181,7 @@
 
 
 
-		                    //Log the user in
+	                        //Log the user in
 	                        $.ajax({
 	                            url: "xhr/login.php",
 	                            type: "post",
@@ -245,6 +245,9 @@
 	        var taskDetail = $(applicationTemplate).find('#application-task-detail').html();
 	        var taskItem = $(applicationTemplate).find('#application-task-item').html();
 
+	        var accountInfo = $(applicationTemplate).find('#application-account-info').html();
+	        var accountEdit = $(applicationTemplate).find('#application-account-edit').html();
+
 	        $.template('headerTemplate', header);
 	        var headerHtml = $.render(user, 'headerTemplate');
 
@@ -254,11 +257,11 @@
 	        loadProjects();
 
 	        // add the event listener to the elements
+	        $('#header_account').html(accountEdit);
+	        $('#header_user').click(function () {
 
-	        $('#header_user').click(function (){
-		        
-		        $('#header_account').toggle();
-		        
+	            $('#header_account').toggle();
+
 	        });
 
 	        $('#header_logout').click(function () {
@@ -301,9 +304,9 @@
 
 	    // clear the main
 	    $('#main').html('<br />');
-	    
+
 	    var newProjectButton = '<button id="application_create" class="button-submit">New Project</button>';
-	    
+
 	    $(newProjectButton).appendTo('#main');
 
 	    $.ajax({
@@ -318,13 +321,12 @@
 	                var projectItemHtml = $.render(response.projects[i], 'projectItemTemplate');
 
 	                $('#main').append(projectItemHtml);
-
 	            }
 
 	        }
 	    });
 	}
-	
+
 
 	function loadTasks(projectID) {
 

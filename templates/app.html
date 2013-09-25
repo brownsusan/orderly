@@ -21,27 +21,27 @@
 	
 		<script type="text/template" id="application-account-info">
 			<div>
-				<label for="account_firstName">First Name</label>
-				<label id="account_firstName" type="text" placeholder="ex: John">
+				<label for="account_firstName">First Name:</label>
+				<label id="account_firstName">{{=user_n}}</label>
 			</div>
 			<div>
-				<label for="account_lastName">Last Name</label>
-				<label id="account_lastName" type="text" placeholder="ex: Doe">
+				<label for="account_lastName">Last Name:</label>
+				<label id="account_lastName">LN HERE</label>
 			</div>
 			<div>
-				<label for="account_username">Username</label>
-				<label id="account_username" type="text" placeholder="ex: johndoe1234">
+				<label for="account_username">Username:</label>
+				<label id="account_username">UN HERE</label>
 			</div>
 			<div>
-				<label for="account_email">Email Address</label>
-				<label id="account_email" type="email" placeholder="ex: jdoe@domain.com">
+				<label for="account_email">Email Address:</label>
+				<label id="account_email">EMAIL HERE</label>
 			</div>
 			<div>
-				<label for="account_pass">Password</label>
-				<label id="account_pass" type="password" placeholder="Password should be 6 characters or longer">
+				<label for="account_pass">Password:</label>
+				<label id="account_pass" >PW HERE</label>
 			</div>
-			<button id="account_save" class="button-submit">
-					Save
+			<button id="account_edit" class="button-submit">
+					Edit
 			</button>
 	</script>
 	
@@ -49,23 +49,27 @@
 	<script type="text/template" id="application-account-edit">
 			<div>
 				<label for="account_firstName">First Name</label>
-				<input id="account_firstName" type="text" placeholder="ex: John">
+				<input id="account_firstName" type="text" value="{{=user_n}}">
 			</div>
 			<div>
 				<label for="account_lastName">Last Name</label>
-				<input id="account_lastName" type="text" placeholder="ex: Doe">
+				<input id="account_lastName" type="text" value="LN HERE">
 			</div>
 			<div>
 				<label for="account_username">Username</label>
-				<input id="account_username" type="text" placeholder="ex: johndoe1234">
+				<input id="account_username" type="text" value="UN HERE">
 			</div>
 			<div>
 				<label for="account_email">Email Address</label>
-				<input id="account_email" type="email" placeholder="ex: jdoe@domain.com">
+				<input id="account_email" type="email" value="EMAIL HERE">
 			</div>
 			<div>
 				<label for="account_pass">Password</label>
-				<input id="account_pass" type="password" placeholder="Password should be 6 characters or longer">
+				<input id="account_pass" type="password" value="PW HERE">
+			</div>
+			<div>
+				<label for="account_confirmPass">Confirm Password</label>
+				<input id="account_confirmPass" type="password" value="PW HERE">
 			</div>
 			<button id="account_save" class="button-submit">
 					Save
