@@ -35,6 +35,16 @@
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+#header_account{
+	background:#ff00ff;
+	width:400px;
+	height:300px;
+	position: absolute;
+	top:45px;
+	right:5px;
+	display:none;
+}
+
 /** Home */
 
 .home-hero {

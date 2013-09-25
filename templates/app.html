@@ -10,7 +10,67 @@
 				<span id="header_user">{{=user_n}}</span>
 				<button id="header_logout">Log Out</button>
 			</div>
+			
+			
+			<div id="header_account">
+				
+			</div>
+			
 	</script><!-- header template close -->
+	
+	
+		<script type="text/template" id="application-account-info">
+			<div>
+				<label for="account_firstName">First Name</label>
+				<label id="account_firstName" type="text" placeholder="ex: John">
+			</div>
+			<div>
+				<label for="account_lastName">Last Name</label>
+				<label id="account_lastName" type="text" placeholder="ex: Doe">
+			</div>
+			<div>
+				<label for="account_username">Username</label>
+				<label id="account_username" type="text" placeholder="ex: johndoe1234">
+			</div>
+			<div>
+				<label for="account_email">Email Address</label>
+				<label id="account_email" type="email" placeholder="ex: jdoe@domain.com">
+			</div>
+			<div>
+				<label for="account_pass">Password</label>
+				<label id="account_pass" type="password" placeholder="Password should be 6 characters or longer">
+			</div>
+			<button id="account_save" class="button-submit">
+					Save
+			</button>
+	</script>
+	
+	
+	<script type="text/template" id="application-account-edit">
+			<div>
+				<label for="account_firstName">First Name</label>
+				<input id="account_firstName" type="text" placeholder="ex: John">
+			</div>
+			<div>
+				<label for="account_lastName">Last Name</label>
+				<input id="account_lastName" type="text" placeholder="ex: Doe">
+			</div>
+			<div>
+				<label for="account_username">Username</label>
+				<input id="account_username" type="text" placeholder="ex: johndoe1234">
+			</div>
+			<div>
+				<label for="account_email">Email Address</label>
+				<input id="account_email" type="email" placeholder="ex: jdoe@domain.com">
+			</div>
+			<div>
+				<label for="account_pass">Password</label>
+				<input id="account_pass" type="password" placeholder="Password should be 6 characters or longer">
+			</div>
+			<button id="account_save" class="button-submit">
+					Save
+			</button>
+	</script>
 	
 	
 	<script type="text/template" id="application-project-submit">
