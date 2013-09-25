@@ -67,12 +67,12 @@
 	
 	
 	<script type="text/template" id="application-project-submit">
-		<div class="project-submit-container">
-			
+		<div class="project-submit-container project-container hidden">
+			<input type="hidden" class="data-id" value="{{=id}}" />
 			<div class="project-submit-heading">
 				<div class="status {{=status}}"></div>
 				<span class="project-submit-title">{{=projectName}}</span>
-				<span class="icon-delete"></span>
+				<span class="icon-delete project-delete"></span>
 			</div>
 	
 			<div class="padding">
@@ -121,7 +121,7 @@
 				</div>
 	
 				<div class="clear"></div>
-				<button class="submit-save">
+				<button class="project-submit-save">
 					Save
 				</button>
 				<div class="clear"></div>
@@ -133,12 +133,13 @@
 	
 	
 	<script type="text/template" id="application-project-detail">
-		<div class="project-submit-container">
-			<div class="project-submit-heading">
+		<div class="project-detail-container project-container">
+			<input type="hidden" class="data-id" value="{{=id}}" />
+			<div class="project-detail-heading">
 				<div class="status {{=status}}"></div>
-				<span class="project-submit-title">{{=projectName}}</span>
-				<span class="icon-delete"></span>
-				<span class="icon-edit"></span>
+				<span class="project-detail-title">{{=projectName}}</span>
+				<span class="icon-delete project-delete"></span>
+				<span class="icon-edit project-edit"></span>
 			</div>
 
 			<div class="padding">
@@ -147,13 +148,13 @@
 
 					<span>Project Name</span>
 					<br />
-					<span class="project-submit-name">{{=projectName}}</span>
+					<span class="project-detail-name">{{=projectName}}</span>
 
 					<div class="content-spacer"></div>
 
 					<span>Project Description</span>
 					<br />
-					<span class="project-submit-description">{{=projectDescription}}</span>																																																																															
+					<span class="project-detail-description">{{=projectDescription}}</span>																																																																															
 
 				</div>
 
@@ -161,7 +162,7 @@
 
 					<span>Due Date</span>
 					<br />
-					<span type="text" class="project-submit-date">{{=dueDate}}</span>
+					<span type="text" class="project-detail-date">{{=dueDate}}</span>
 
 					<div class="content-spacer"></div>
 

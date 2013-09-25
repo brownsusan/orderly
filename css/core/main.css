@@ -116,14 +116,14 @@
 /** Project */
 
 /* Project Create AND Edit */
-.project-submit-container {
+.project-submit-container, .project-detail-container {
 	background: #f0f0f0;
 	box-shadow: 0 0.2em 0.35em rgba(0, 0, 0, 0.4);
 	text-align: left;
 	width: 100%;
 }
 
-.project-submit-heading {
+.project-submit-heading, .project-detail-heading {
 	background: #e6e6e6;
 	background: -moz-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
 	background: -webkit-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
@@ -134,21 +134,21 @@
 	width: 100%;
 }
 
-.project-submit-title {
+.project-submit-title, .project-detail-title {
 	font-weight: bold;
 	margin-left: 20px;
 }
 
-.project-submit-name, .project-submit-description {
+.project-submit-name, .project-submit-description, .project-detail-name, .project-detail-description {
 	display: block;
 	width: 650px;
 }
 
-.project-submit-description {
+.project-submit-description, .project-detail-description {
 	height: 115px;
 }
 
-.project-submit-date {
+.project-submit-date, .project-detail-date {
 	width: 196px;
 }
 /* End Project Create AND Edit */

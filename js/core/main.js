@@ -323,6 +323,62 @@ function loadApplication() {
 			loadTasks(projectID);
 
 		});
+		
+		
+		
+		$(document).on('click', '.project-edit', function(e) {
+
+			var projectID = $(this).closest('.project-container').find('.data-id').val();
+
+			console.log(projectID);
+			
+			$('.project-detail-container').hide();
+			$('.project-submit-container').show();
+
+		});
+		
+		$(document).on('click', '.project-submit-save', function(e) {
+
+			var projectContainer = $(this).closest('.project-container');
+			var projectID = projectContainer.find('.data-id').val();
+
+			console.log(projectID);
+			
+			$('.project-detail-container').show();
+			$('.project-submit-container').hide();
+			
+			//make variables
+			var name = projectContainer.find('.project-submit-name').val();
+			var description = projectContainer.find('.project-submit-description').val();
+			var dueDate = projectContainer.find('.project-submit-date').val();
+			console.log('name: ' + name, ' description: ' + description, ' due date: ' + dueDate);
+			
+			//validate variables
+			
+			//ajax request
+			$.ajax({
+				url : "xhr/update_project.php",
+				type : "post",
+				dataType : "json",
+				data : {
+					 'projectID': projectID,
+					 'projectName': name,
+					 'projectDescription': description
+				},
+				success : function(response) {
+		
+					console.log(response);
+					if(response.project){
+						loadTasks(projectID);
+					}else{
+						//show and error
+					}
+		
+				}
+			});
+
+		});
+		
 
 		$(document).on('click', '.task-item', function(e) {
 
