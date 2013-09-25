@@ -245,9 +245,6 @@
 	        var taskDetail = $(applicationTemplate).find('#application-task-detail').html();
 	        var taskItem = $(applicationTemplate).find('#application-task-item').html();
 
-	        var accountInfo = $(applicationTemplate).find('#application-account-info').html();
-	        var accountEdit = $(applicationTemplate).find('#application-account-edit').html();
-
 	        $.template('headerTemplate', header);
 	        var headerHtml = $.render(user, 'headerTemplate');
 
@@ -257,11 +254,13 @@
 	        loadProjects();
 
 	        // add the event listener to the elements
-	        $('#header_account').html(accountEdit);
 	        $('#header_user').click(function () {
-
 	            $('#header_account').toggle();
-
+	        });
+	        
+	        $('#account_edit').click(function(){
+	        	$('#header_account_display').hide();
+	        	$('#header_account_edit').show();
 	        });
 
 	        $('#header_logout').click(function () {

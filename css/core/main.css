@@ -45,6 +45,10 @@
 	display:none;
 }
 
+#header_account_edit{
+	display:none;
+}
+
 /** Home */
 
 .home-hero {
