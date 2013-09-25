@@ -144,11 +144,11 @@
 	                valid = false;
 	                // show the user an error
 	            }
-	            if (pass.length < 6) {
+	            if (pass.length > 0 && pass.length < 6) {
 	                valid = false;
 	                // show the user an error
 	            }
-	            if (confirmPass.length < 6) {
+	            if (confirmPass.length > 0 && confirmPass.length < 6) {
 	                valid = false;
 	                // show the user an error
 	            }
@@ -320,13 +320,9 @@
 					   'password': pass
 	                },
 	                success: function (response) {
-
-	                    // if the user logged in
 	                    if (response.user) {
 	                    	//
 	                    }
-
-	                    // if the user did not log in
 	                    else {
 	                        // show error
 	                    }
