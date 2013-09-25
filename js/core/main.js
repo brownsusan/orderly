@@ -179,36 +179,6 @@
 	                    // if the user signed up
 	                    if (response.user) {
 
-
-
-	                        //Log the user in
-	                        $.ajax({
-	                            url: "xhr/login.php",
-	                            type: "post",
-	                            dataType: "json",
-	                            data: {
-	                                'username': username,
-	                                'password': pass
-	                            },
-	                            success: function (response) {
-
-	                                // if the user logged in
-	                                if (response.user) {
-	                                    user = response.user;
-	                                    loadApplication();
-	                                }
-
-	                                // if the user did not log in
-	                                else {
-	                                    // show error
-	                                }
-
-	                            }
-	                        });
-
-
-
-
 	                    }
 
 	                    // if the user did not sign up
@@ -236,7 +206,7 @@
 	    // create all the page elements
 	    //?2 is for forcing it to reload - remove before submitting - clear cache to remove the need to reload
 	    //HACK
-	    $.get("templates/app.html?3", function (template) {
+	    $.get("templates/app.html?4", function (template) {
 	        applicationTemplate = template;
 
 	        var header = $(applicationTemplate).find('#application-header').html();
@@ -363,7 +333,7 @@
 
 	        });
 	        
-	        
+	        $(document).on()
 
 	    }); //end get template function
 
