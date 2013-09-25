@@ -313,8 +313,8 @@ function loadApplication() {
 
 		$(document).on('click', '.project-item', function(e) {
 
-			// stop children elements from triggering this
-			if (e.target !== this && $(e.target).attr('class') !== 'icon-edit') {
+			// stop the delete button from triggering this
+			if ($(e.target).attr('class') == 'icon-delete') {
 				return;
 			}
 
