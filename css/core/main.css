@@ -9,7 +9,7 @@
 	text-align: left;
 	margin: 0 auto;
 	padding-bottom: 60px;
-	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+/* 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5); */
 }
 
 .header-home {
@@ -120,7 +120,8 @@
 	background: #f0f0f0;
 	box-shadow: 0 0.2em 0.35em rgba(0, 0, 0, 0.4);
 	text-align: left;
-	width: 100%;
+	margin: 0 auto;
+	width: 95%;
 }
 
 .project-submit-heading, .project-detail-heading {
@@ -165,6 +166,7 @@
 	text-align: left;
 	width: 95%;
 	margin: 10px auto;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .project-name {
@@ -221,6 +223,7 @@
 	text-align: left;
 	width: 95%;
 	margin: 10px auto;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .task-name {
@@ -266,6 +269,13 @@
 }
 
 .button-status {
+	background: #e6e6e6;
+	background: -moz-linear-gradient(top, #e6e6e6 40%, #d4d4d4 100%);
+	background: -webkit-linear-gradient(top, #e6e6e6 40%, #d4d4d4 100%);
+	background: -o-linear-gradient(top, #e6e6e6 40%, #d4d4d4 100%);
+	background: -ms-linear-gradient(top, #e6e6e6 40%, #d4d4d4 100%);
+	background: linear-gradient(to bottom, #e6e6e6 40%, #d4d4d4 100%);
+	border: 1px solid #f0f0f0;
 	display: block;
 	padding: 0;
 	position: relative;

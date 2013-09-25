@@ -334,6 +334,38 @@ function loadApplication() {
 			$('.project-submit-container').show();
 
 		});
+		
+		$(document).on('click', '.project-item-delete', function(e) {
+
+			var answer = confirm("Are you sure you want to delete this project?");
+
+			if (answer) {
+
+				var projectID = $(this).closest('.project-item').find('.data-id').val();
+
+				$.ajax({
+					url : "xhr/delete_project.php",
+					type : "post",
+					dataType : "json",
+					data : {
+						'projectID' : projectID
+					},
+					success : function(response) {
+
+						console.log(response);
+						if (response.success) {
+							loadProjects();
+						} else {
+							//show and error
+						}
+
+					}
+				});
+
+			}
+
+		});
+
 
 		$(document).on('click', '.project-delete', function(e) {
 
