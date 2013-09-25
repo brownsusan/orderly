@@ -196,6 +196,7 @@
 	
 	<script type="text/template" id="application-project-item">
 		<div class="project-item">
+			<input type="hidden" class="data-id" value="{{=id}}" />
 			<div class="status {{=status}}"></div>
 			<span class="project-name">{{=projectName}}</span>
 			<span class="icon-delete"></span>
@@ -358,8 +359,9 @@
 	
 	<script type="text/template" id="application-task-item">
 		<div class="task-item">
-				<div class="status"></div>
-				<span class="task-name">Task Name</span>
+				<input type="hidden" class="data-id" value="{{=id}}" />
+				<div class="status {{=status}}"></div>
+				<span class="task-name">{{=taskName}}</span>
 				<span class="icon-delete"></span>
 				<span class="icon-edit"></span>
 			</div>
