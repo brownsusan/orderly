@@ -330,7 +330,7 @@
 	                    else {
 	                        // show error
 	                    }
-
+	                    
 	                }
 	            });
 
@@ -362,6 +362,8 @@
 	            });
 
 	        });
+	        
+	        
 
 	    }); //end get template function
 
