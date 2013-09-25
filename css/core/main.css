@@ -9,7 +9,7 @@
 	text-align: left;
 	margin: 0 auto;
 	padding-bottom: 60px;
-/* 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5); */
+	/* 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5); */
 }
 
 .header-home {
@@ -35,18 +35,18 @@
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-#header_account{
-	background:#ff00ff;
-	width:400px;
-	height:300px;
+#header_account {
+	background: #ff00ff;
+	width: 400px;
+	height: 300px;
 	position: absolute;
-	top:45px;
-	right:5px;
-	display:none;
+	top: 45px;
+	right: 5px;
+	display: none;
 }
 
-#header_account_edit{
-	display:none;
+#header_account_edit {
+	display: none;
 }
 
 /** Home */
@@ -73,7 +73,7 @@
 	top: -25px;
 }
 
-.home-signup-form .form{
+.home-signup-form .form {
 	margin: -65px 20px 0 400px;
 	background: #ffffff;
 	padding: 10px;
@@ -81,18 +81,18 @@
 	border-radius: 2px;
 }
 
-.home-signup-form .form label{
+.home-signup-form .form label {
 	width: 150px;
 	display: inline-block;
 }
 
-.home-signup-form .form input{
+.home-signup-form .form input {
 	width: 310px;
 	display: inline-block;
 	padding-left: 5px;
 }
 
-.home-signup-form p{
+.home-signup-form p {
 	font-size: 1.3em;
 	width: 360px;
 	text-align: center;
@@ -102,7 +102,7 @@
 	padding: 10px;
 }
 
-.home-signup-form div{
+.home-signup-form div {
 	margin: 20px 20px;
 }
 
@@ -122,6 +122,7 @@
 	text-align: left;
 	margin: 0 auto;
 	width: 95%;
+	line-height: 1.5em;
 }
 
 .project-submit-heading, .project-detail-heading {
@@ -177,9 +178,9 @@
 /* Task Create AND Edit */
 .task-submit-container {
 	background: #f0f0f0;
-	box-shadow: 0 0.2em 0.35em rgba(0, 0, 0, 0.4);
 	text-align: left;
-	width: 95%;
+	position: relative;
+	line-height: 1.5em;
 }
 
 .task-submit-heading {
@@ -203,6 +204,7 @@
 }
 
 .task-submit-description {
+	display: block;
 	height: 115px;
 }
 
@@ -218,7 +220,6 @@
 	background: -o-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
 	background: -ms-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
 	background: linear-gradient(to bottom, #e6e6e6 0%, #d4d4d4 100%);
-	height: 50px;
 	line-height: 50px;
 	text-align: left;
 	width: 95%;

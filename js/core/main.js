@@ -314,24 +314,13 @@ function loadApplication() {
 		$(document).on('click', '.project-item', function(e) {
 
 			// stop the delete button from triggering this
-			if ($(e.target).attr('class') == 'icon-delete') {
+			if ($(e.target).attr('class') == 'project-item-delete') {
 				return;
 			}
 
 			var projectID = $(this).find('.data-id').val();
 
-			loadTasks(projectID);
-
-		});
-
-		$(document).on('click', '.project-edit', function(e) {
-
-			var projectID = $(this).closest('.project-container').find('.data-id').val();
-
-			console.log(projectID);
-
-			$('.project-detail-container').hide();
-			$('.project-submit-container').show();
+			loadProjectDetails(projectID);
 
 		});
 		
@@ -366,6 +355,17 @@ function loadApplication() {
 
 		});
 
+		$(document).on('click', '.project-edit', function(e) {
+
+			var projectID = $(this).closest('.project-container').find('.data-id').val();
+
+			console.log(projectID);
+
+			$('.project-detail-container').hide();
+			$('.project-submit-container').show();
+
+		});
+		
 
 		$(document).on('click', '.project-delete', function(e) {
 
@@ -412,7 +412,6 @@ function loadApplication() {
 			var name = projectContainer.find('.project-submit-name').val();
 			var description = projectContainer.find('.project-submit-description').val();
 			var dueDate = projectContainer.find('.project-submit-date').val();
-			console.log('name: ' + name, ' description: ' + description, ' due date: ' + dueDate);
 
 			//validate variables
 
@@ -430,7 +429,7 @@ function loadApplication() {
 
 					console.log(response);
 					if (response.project) {
-						loadTasks(projectID);
+						loadProjectDetails(projectID);
 					} else {
 						//show and error
 					}
@@ -447,7 +446,7 @@ function loadApplication() {
 				return;
 			}
 
-			var taskID = $(this).find('.data-id').val();
+			$(this).find('.task-detail').slideToggle('fast');
 
 		});
 
@@ -484,13 +483,11 @@ function loadProjects() {
 	});
 }
 
-function loadTasks(projectID) {
+function loadProjectDetails(projectID) {
 
 	var projectSubmit = $(applicationTemplate).find('#application-project-submit').html();
 	var projectDetail = $(applicationTemplate).find('#application-project-detail').html();
 
-	var taskSubmit = $(applicationTemplate).find('#application-task-submit').html();
-	var taskDetail = $(applicationTemplate).find('#application-task-detail').html();
 	var taskItem = $(applicationTemplate).find('#application-task-item').html();
 
 	$.template('projectSubmitTemplate', projectSubmit);
@@ -536,4 +533,4 @@ function loadTasks(projectID) {
 		}
 	});
 
-};
+}

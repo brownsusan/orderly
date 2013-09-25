@@ -364,6 +364,128 @@
 			<span class="task-name">{{=taskName}}</span>
 			<span class="icon-delete"></span>
 			<span class="icon-edit"></span>
+			
+			<div class="center-parent hidden task-submit">
+
+				<div class="task-submit-container center-child task-container">
+	
+					<div class="padding">
+	
+						<div class="left">
+	
+							<span>Task Name</span>
+							<br />
+							<input type="text" class="task-submit-name" />
+	
+							<div class="content-spacer"></div>
+	
+							<span>Task Description</span>
+							<br />
+							<textarea class="task-submit-description"></textarea>																																																																																					
+	
+						</div>
+	
+						<div class="right">
+	
+							<span>Due Date</span>
+							<br />
+							<input type="text" class="task-submit-date" />
+	
+							<div class="content-spacer"></div>
+	
+							<span>Status</span>
+							<br />
+							<button class="button-status">
+								<div class="status active"></div>
+								<span>Active</span>
+							</button>
+							<button class="button-status">
+								<div class="status urgent"></div>
+								<span>Urgent</span>
+							</button>
+							<button class="button-status">
+								<div class="status delayed"></div>
+								<span>Delayed</span>
+							</button>
+							<button class="button-status">
+								<div class="status done"></div>
+								<span>Done</span>
+							</button>
+	
+						</div>
+	
+						<div class="clear"></div>
+						<button class="submit-save">
+							Save
+						</button>
+						<div class="clear"></div>
+	
+					</div>
+	
+				</div>
+	
+			</div>
+			
+			<div class="center-parent hidden task-detail">
+	
+				<div class="task-submit-container center-child task-container">
+	
+					<div class="padding">
+	
+						<div class="left">
+	
+							<span class="bold">Task Name</span>
+							<br />
+							<span type="text" class="task-submit-name">{{=taskName}}</span>
+	
+	
+							<div class="content-spacer"></div>
+	
+							<span class="bold">Task Description</span>
+							<br />
+							<span class="task-submit-description">{{=taskDescription}}</span>																																																																																					
+	
+						</div>
+	
+						<div class="right">
+	
+							<span class="bold">Due Date</span>
+							<br />
+							<span type="text" class="task-submit-date">{{=dueDate}}</span>
+	
+							<div class="content-spacer"></div>
+	
+							<span class="bold">Status</span>
+							<br />
+							<button class="button-status">
+								<div class="status active"></div>
+								<span>Active</span>
+							</button>
+							<button class="button-status">
+								<div class="status urgent"></div>
+								<span>Urgent</span>
+							</button>
+							<button class="button-status">
+								<div class="status delayed"></div>
+								<span>Delayed</span>
+							</button>
+							<button class="button-status">
+								<div class="status done"></div>
+								<span>Done</span>
+							</button>
+	
+						</div>
+	
+						<div class="clear"></div>
+	
+					</div>
+	
+				</div>
+	
+			</div>
+			
+			<div class="clear"></div>
+			
 		</div>
 	</script>
 	
