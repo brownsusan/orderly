@@ -323,6 +323,35 @@ function loadApplication() {
 			loadTasks(projectID);
 
 		});
+		
+		
+		
+		$(document).on('click', '.project-edit', function(e) {
+
+			var projectID = $(this).closest('.project-detail-container').find('.data-id').val();
+
+			console.log(projectID);
+			
+			$('.project-detail-container').hide();
+			$('.project-submit-container').show();
+
+		});
+		
+		$(document).on('click', '.project-submit-save', function(e) {
+
+			var projectID = $(this).closest('.project-submit-container').find('.data-id').val();
+
+			console.log(projectID);
+			
+			$('.project-detail-container').show();
+			$('.project-submit-container').hide();
+			
+			//make variables
+			//validate variables
+			//ajax request
+
+		});
+		
 
 		$(document).on('click', '.task-item', function(e) {
 
