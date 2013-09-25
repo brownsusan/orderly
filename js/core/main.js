@@ -314,7 +314,7 @@ function loadApplication() {
 		$(document).on('click', '.project-item', function(e) {
 
 			// stop children elements from triggering this
-			if (e.target !== this) {
+			if (e.target !== this && $(e.target).attr('class') !== 'icon-edit') {
 				return;
 			}
 
@@ -323,62 +323,90 @@ function loadApplication() {
 			loadTasks(projectID);
 
 		});
-		
-		
-		
+
 		$(document).on('click', '.project-edit', function(e) {
 
 			var projectID = $(this).closest('.project-container').find('.data-id').val();
 
 			console.log(projectID);
-			
+
 			$('.project-detail-container').hide();
 			$('.project-submit-container').show();
 
 		});
-		
+
+		$(document).on('click', '.project-delete', function(e) {
+
+			var answer = confirm("Are you sure you want to delete this project?");
+
+			if (answer) {
+
+				var projectID = $(this).closest('.project-container').find('.data-id').val();
+
+				$.ajax({
+					url : "xhr/delete_project.php",
+					type : "post",
+					dataType : "json",
+					data : {
+						'projectID' : projectID
+					},
+					success : function(response) {
+
+						console.log(response);
+						if (response.success) {
+							loadProjects();
+						} else {
+							//show and error
+						}
+
+					}
+				});
+
+			}
+
+		});
+
 		$(document).on('click', '.project-submit-save', function(e) {
 
 			var projectContainer = $(this).closest('.project-container');
 			var projectID = projectContainer.find('.data-id').val();
 
 			console.log(projectID);
-			
+
 			$('.project-detail-container').show();
 			$('.project-submit-container').hide();
-			
+
 			//make variables
 			var name = projectContainer.find('.project-submit-name').val();
 			var description = projectContainer.find('.project-submit-description').val();
 			var dueDate = projectContainer.find('.project-submit-date').val();
 			console.log('name: ' + name, ' description: ' + description, ' due date: ' + dueDate);
-			
+
 			//validate variables
-			
+
 			//ajax request
 			$.ajax({
 				url : "xhr/update_project.php",
 				type : "post",
 				dataType : "json",
 				data : {
-					 'projectID': projectID,
-					 'projectName': name,
-					 'projectDescription': description
+					'projectID' : projectID,
+					'projectName' : name,
+					'projectDescription' : description
 				},
 				success : function(response) {
-		
+
 					console.log(response);
-					if(response.project){
+					if (response.project) {
 						loadTasks(projectID);
-					}else{
+					} else {
 						//show and error
 					}
-		
+
 				}
 			});
 
 		});
-		
 
 		$(document).on('click', '.task-item', function(e) {
 
@@ -397,7 +425,6 @@ function loadApplication() {
 }
 
 function loadProjects() {
-
 
 	var projectItem = $(applicationTemplate).find('#application-project-item').html();
 
@@ -452,7 +479,7 @@ function loadTasks(projectID) {
 			// render the project details view
 			var projectSubmitHtml = $.render(response.projects[0], 'projectSubmitTemplate');
 			$('#main').append(projectSubmitHtml);
-			
+
 			var projectDetailHtml = $.render(response.projects[0], 'projectDetailTemplate');
 			$('#main').append(projectDetailHtml);
 
