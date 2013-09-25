@@ -1,77 +1,225 @@
 <div>
 	
 	<script type="text/template" id="application-header">
-			<div class="header-home">
-				<div class="header-icon"></div>
-				<span>Orderly</span>
-			</div>
-			<!-- THIS DIV NEEDS TO BE POPULATED WITH THE USERNAME LINK-->
-			<div class="header-login">
-				<span id="header_user">{{=user_n}}</span>
-				<button id="header_logout">Log Out</button>
+		<div class="header-home">
+			<div class="header-icon"></div>
+			<span>Orderly</span>
+		</div>
+		<!-- THIS DIV NEEDS TO BE POPULATED WITH THE USERNAME LINK-->
+		<div class="header-login">
+			<span id="header_user">{{=user_n}}</span>
+			<button id="header_logout">Log Out</button>
+		</div>
+			
+		<div id="header_account">
+			
+			<div id="header_account_display">
+				
+				<div>
+					<label for="account_display_firstName">First Name:</label>
+					<label id="account_display_firstName">{{=first_name}}</label>
+				</div>
+				<div>
+					<label for="account_display_lastName">Last Name:</label>
+					<label id="account_display_lastName">{{=last_name}}</label>
+				</div>
+				<div>
+					<label for="account_display_email">Email Address:</label>
+					<label id="account_display_email">{{=email}}</label>
+				</div>
+				<button id="account_edit" class="button-submit">
+						Edit
+				</button>
+				
 			</div>
 			
-			
-			<div id="header_account">
+			<div id="header_account_edit">
 				
-				<div id="header_account_display">
-					
-					<div>
-						<label for="account_display_firstName">First Name:</label>
-						<label id="account_display_firstName">{{=first_name}}</label>
-					</div>
-					<div>
-						<label for="account_display_lastName">Last Name:</label>
-						<label id="account_display_lastName">{{=last_name}}</label>
-					</div>
-					<div>
-						<label for="account_display_email">Email Address:</label>
-						<label id="account_display_email">{{=email}}</label>
-					</div>
-					<button id="account_edit" class="button-submit">
-							Edit
-					</button>
-					
+				<div>
+					<label for="account_edit_firstName">First Name</label>
+					<input id="account_edit_firstName" type="text" value="{{=first_name}}">
 				</div>
-				
-				<div id="header_account_edit">
-					
-					<div>
-						<label for="account_edit_firstName">First Name</label>
-						<input id="account_edit_firstName" type="text" value="{{=first_name}}">
-					</div>
-					<div>
-						<label for="account_edit_lastName">Last Name</label>
-						<input id="account_edit_lastName" type="text" value="{{=last_name}}">
-					</div>
-					<div>
-						<label for="account_edit_email">Email Address</label>
-						<input id="account_edit_email" type="email" value="{{=email}}">
-					</div>
-					<div>
-						<label for="account_edit_pass">Password</label>
-						<input id="account_edit_pass" type="password">
-					</div>
-					<div>
-						<label for="account_edit_confirmPass">Confirm Password</label>
-						<input id="account_edit_confirmPass" type="password">
-					</div>
-					<button id="account_save" class="button-submit">
-							Save
-					</button>
-					
+				<div>
+					<label for="account_edit_lastName">Last Name</label>
+					<input id="account_edit_lastName" type="text" value="{{=last_name}}">
 				</div>
+				<div>
+					<label for="account_edit_email">Email Address</label>
+					<input id="account_edit_email" type="email" value="{{=email}}">
+				</div>
+				<div>
+					<label for="account_edit_pass">Password</label>
+					<input id="account_edit_pass" type="password">
+				</div>
+				<div>
+					<label for="account_edit_confirmPass">Confirm Password</label>
+					<input id="account_edit_confirmPass" type="password">
+				</div>
+				<button id="account_save" class="button-submit">
+						Save
+				</button>
 				
 			</div>
+			
+		</div>
 			
 	</script><!-- header template close -->
 	
 	
 	<script type="text/template" id="application-project-submit">
-				<div class="project-submit-container">
-				<div class="project-submit-heading">
-					<div class="status active"></div>
-					<span class="project-submit-title">Project Name</span>
+		<div class="project-submit-container">
+			
+			<div class="project-submit-heading">
+				<div class="status active"></div>
+				<span class="project-submit-title">Project Name</span>
+				<span class="icon-delete"></span>
+			</div>
+	
+			<div class="padding">
+	
+				<div class="left">
+	
+					<span>Project Name</span>
+					<br />
+					<input type="text" class="project-submit-name" />
+	
+					<div class="content-spacer"></div>
+	
+					<span>Project Description</span>
+					<br />
+					<textarea class="project-submit-description"></textarea>																																																																															
+	
+				</div>
+	
+				<div class="right">
+	
+					<span>Due Date</span>
+					<br />
+					<input type="text" class="project-submit-date" />
+	
+					<div class="content-spacer"></div>
+	
+					<span>Status</span>
+					<br />
+					<button class="button-status">
+						<div class="status active"></div>
+						<span>Active</span>
+					</button>
+					<button class="button-status">
+						<div class="status urgent"></div>
+						<span>Urgent</span>
+					</button>
+					<button class="button-status">
+						<div class="status delay"></div>
+						<span>Delay</span>
+					</button>
+					<button class="button-status">
+						<div class="status done"></div>
+						<span>Done</span>
+					</button>
+	
+				</div>
+	
+				<div class="clear"></div>
+				<button class="submit-save">
+					Save
+				</button>
+				<div class="clear"></div>
+	
+			</div>
+
+		</div>
+	</script><!-- End Project Submit Template -->
+	
+	
+	<script type="text/template" id="application-project-detail">
+		<div class="project-submit-container">
+			<div class="project-submit-heading">
+				<div class="status active"></div>
+				<span class="project-submit-title">Project Name</span>
+				<span class="icon-delete"></span>
+				<span class="icon-edit"></span>
+			</div>
+
+			<div class="padding">
+
+				<div class="left">
+
+					<span>Task Name</span>
+					<br />
+					<span class="project-submit-name">NAME HERE</span>
+
+					<div class="content-spacer"></div>
+
+					<span>Project Description</span>
+					<br />
+					<span class="project-submit-description">DESCRIPTION HERE</span>																																																																															
+
+				</div>
+
+				<div class="right">
+
+					<span>Due Date</span>
+					<br />
+					<span type="text" class="project-submit-date">DUE DATE HERE</span>
+
+					<div class="content-spacer"></div>
+
+					<span>Status</span>
+					<br />
+					<button class="button-status">
+						<div class="status active"></div>
+						<span>Active</span>
+					</button>
+					<button class="button-status">
+						<div class="status urgent"></div>
+						<span>Urgent</span>
+					</button>
+					<button class="button-status">
+						<div class="status delay"></div>
+						<span>Delay</span>
+					</button>
+					<button class="button-status">
+						<div class="status done"></div>
+						<span>Done</span>
+					</button>
+
+				</div>
+
+				<div class="clear"></div>
+
+			</div>
+
+		</div>
+	</script><!-- End Project Details Template-->
+	
+	
+	<script type="text/template" id="application-project-item">
+		<div class="project-item">
+			<input type="hidden" class="data-id" value="{{=id}}" />
+			<div class="status {{=status}}"></div>
+			<span class="project-name">{{=projectName}}</span>
+			<span class="icon-delete"></span>
+			<span class="icon-edit"></span>
+		</div>
+	</script><!-- End Project Item Template-->
+	
+
+	<script type="text/template" id="application-task-submit">
+		<div class="center-parent">
+
+			<div class="list-header">
+				<button class="right">
+					Add Task
+				</button>
+				<span class="list-heading">Tasks for Project Name</span>
+			</div>
+
+			<div class="task-submit-container center-child">
+
+				<div class="status active"></div>
+				<div class="task-submit-heading">
+					<span class="task-submit-title">New Task</span>
 					<span class="icon-delete"></span>
 				</div>
 
@@ -79,15 +227,15 @@
 
 					<div class="left">
 
-						<span>Project Name</span>
+						<span>Task Name</span>
 						<br />
-						<input type="text" class="project-submit-name" />
+						<input type="text" class="task-submit-name" />
 
 						<div class="content-spacer"></div>
 
-						<span>Project Description</span>
+						<span>Task Description</span>
 						<br />
-						<textarea class="project-submit-description"></textarea>																																																																															
+						<textarea class="task-submit-description"></textarea>																																																																																					
 
 					</div>
 
@@ -95,7 +243,7 @@
 
 						<span>Due Date</span>
 						<br />
-						<input type="text" class="project-submit-date" />
+						<input type="text" class="task-submit-date" />
 
 						<div class="content-spacer"></div>
 
@@ -129,14 +277,26 @@
 				</div>
 
 			</div>
-	</script><!-- End Project Submit Template -->
+
+		</div>
+	</script><!-- End Task Submit Template -->
 	
 	
-	<script type="text/template" id="application-project-detail">
-		<div class="project-submit-container">
-				<div class="project-submit-heading">
-					<div class="status active"></div>
-					<span class="project-submit-title">Project Name</span>
+	<script type="text/template" id="application-task-detail">
+		<div class="center-parent">
+	
+			<div class="list-header">
+				<button class="right">
+					Add Task
+				</button>
+				<span class="list-heading">Tasks for Project Name</span>
+			</div>
+
+			<div class="task-submit-container center-child">
+
+				<div class="status active"></div>
+				<div class="task-submit-heading">
+					<span class="task-submit-title">New Task</span>
 					<span class="icon-delete"></span>
 					<span class="icon-edit"></span>
 				</div>
@@ -147,13 +307,14 @@
 
 						<span>Task Name</span>
 						<br />
-						<span class="project-submit-name">NAME HERE</span>
+						<span type="text" class="task-submit-name">TASK NAME</span>
+
 
 						<div class="content-spacer"></div>
 
-						<span>Project Description</span>
+						<span>Task Description</span>
 						<br />
-						<span class="project-submit-description">DESCRIPTION HERE</span>																																																																															
+						<span class="task-submit-description">TASK DESCRIPTION</span>																																																																																					
 
 					</div>
 
@@ -161,7 +322,7 @@
 
 						<span>Due Date</span>
 						<br />
-						<span type="text" class="project-submit-date">DUE DATE HERE</span>
+						<span type="text" class="task-submit-date">DUE DATE</span>
 
 						<div class="content-spacer"></div>
 
@@ -191,180 +352,19 @@
 				</div>
 
 			</div>
-	</script><!-- End Project Details Template-->
-	
-	
-	<script type="text/template" id="application-project-item">
-		<div class="project-item">
-			<input type="hidden" class="data-id" value="{{=id}}" />
-			<div class="status {{=status}}"></div>
-			<span class="project-name">{{=projectName}}</span>
-			<span class="icon-delete"></span>
-			<span class="icon-edit"></span>
+
 		</div>
-	</script><!-- End Project Item Template-->
-	
-
-	<script type="text/template" id="application-task-submit">
-		<div class="center-parent">
-
-				<div class="list-header">
-					<button class="right">
-						Add Task
-					</button>
-					<span class="list-heading">Tasks for Project Name</span>
-				</div>
-
-				<div class="task-submit-container center-child">
-
-					<div class="status active"></div>
-					<div class="task-submit-heading">
-						<span class="task-submit-title">New Task</span>
-						<span class="icon-delete"></span>
-					</div>
-
-					<div class="padding">
-
-						<div class="left">
-
-							<span>Task Name</span>
-							<br />
-							<input type="text" class="task-submit-name" />
-
-							<div class="content-spacer"></div>
-
-							<span>Task Description</span>
-							<br />
-							<textarea class="task-submit-description"></textarea>																																																																																					
-
-						</div>
-
-						<div class="right">
-
-							<span>Due Date</span>
-							<br />
-							<input type="text" class="task-submit-date" />
-
-							<div class="content-spacer"></div>
-
-							<span>Status</span>
-							<br />
-							<button class="button-status">
-								<div class="status active"></div>
-								<span>Active</span>
-							</button>
-							<button class="button-status">
-								<div class="status urgent"></div>
-								<span>Urgent</span>
-							</button>
-							<button class="button-status">
-								<div class="status delay"></div>
-								<span>Delay</span>
-							</button>
-							<button class="button-status">
-								<div class="status done"></div>
-								<span>Done</span>
-							</button>
-
-						</div>
-
-						<div class="clear"></div>
-						<button class="submit-save">
-							Save
-						</button>
-						<div class="clear"></div>
-
-					</div>
-
-				</div>
-
-			</div>
-	</script><!-- End Task Submit Template -->
-	
-	
-	<script type="text/template" id="application-task-detail">
-	<div class="center-parent">
-
-				<div class="list-header">
-					<button class="right">
-						Add Task
-					</button>
-					<span class="list-heading">Tasks for Project Name</span>
-				</div>
-
-				<div class="task-submit-container center-child">
-
-					<div class="status active"></div>
-					<div class="task-submit-heading">
-						<span class="task-submit-title">New Task</span>
-						<span class="icon-delete"></span>
-						<span class="icon-edit"></span>
-					</div>
-
-					<div class="padding">
-
-						<div class="left">
-
-							<span>Task Name</span>
-							<br />
-							<span type="text" class="task-submit-name">TASK NAME</span>
-
-
-							<div class="content-spacer"></div>
-
-							<span>Task Description</span>
-							<br />
-							<span class="task-submit-description">TASK DESCRIPTION</span>																																																																																					
-
-						</div>
-
-						<div class="right">
-
-							<span>Due Date</span>
-							<br />
-							<span type="text" class="task-submit-date">DUE DATE</span>
-
-							<div class="content-spacer"></div>
-
-							<span>Status</span>
-							<br />
-							<button class="button-status">
-								<div class="status active"></div>
-								<span>Active</span>
-							</button>
-							<button class="button-status">
-								<div class="status urgent"></div>
-								<span>Urgent</span>
-							</button>
-							<button class="button-status">
-								<div class="status delay"></div>
-								<span>Delay</span>
-							</button>
-							<button class="button-status">
-								<div class="status done"></div>
-								<span>Done</span>
-							</button>
-
-						</div>
-
-						<div class="clear"></div>
-
-					</div>
-
-				</div>
-
-			</div>
 	</script><!-- End Task Detail Template -->
 	
 	
 	<script type="text/template" id="application-task-item">
 		<div class="task-item">
-				<input type="hidden" class="data-id" value="{{=id}}" />
-				<div class="status {{=status}}"></div>
-				<span class="task-name">{{=taskName}}</span>
-				<span class="icon-delete"></span>
-				<span class="icon-edit"></span>
-			</div>
+			<input type="hidden" class="data-id" value="{{=id}}" />
+			<div class="status {{=status}}"></div>
+			<span class="task-name">{{=taskName}}</span>
+			<span class="icon-delete"></span>
+			<span class="icon-edit"></span>
+		</div>
 	</script>
 	
 </div>
