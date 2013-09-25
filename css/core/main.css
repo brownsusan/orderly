@@ -244,7 +244,7 @@
 	font-size: 1.25em;
 }
 
-.submit-save {
+.project-submit-save, .task-submit-save {
 	width: 200px;
 }
 

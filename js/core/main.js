@@ -403,8 +403,6 @@ function loadApplication() {
 			var projectContainer = $(this).closest('.project-container');
 			var projectID = projectContainer.find('.data-id').val();
 
-			console.log(projectID);
-
 			$('.project-detail-container').show();
 			$('.project-submit-container').hide();
 
@@ -446,8 +444,53 @@ function loadApplication() {
 				return;
 			}
 
-			$(this).find('.task-detail').slideToggle('fast');
+			$(this).find('.task-submit').hide();
+			$(this).find('.task-detail').show();
 
+		});
+		
+		$(document).on('click', '.task-item-edit', function(e) {
+
+			$(this).closest('.task-item').find('.task-submit').show();
+			$(this).closest('.task-item').find('.task-detail').hide();
+
+		});
+		
+		$(document).on('click', '.task-submit-save', function(e) {
+			
+			var taskContainer = $(this).closest('.task-item');
+			var taskID = taskContainer.find('.data-id').val();
+
+			//make variables
+			var name = taskContainer.find('.task-submit-name').val();
+			var description = taskContainer.find('.task-submit-description').val();
+			var dueDate = taskContainer.find('.task-submit-date').val();
+			
+			//validate variables
+
+			//ajax request
+			$.ajax({
+				url : "xhr/update_task.php",
+				type : "post",
+				dataType : "json",
+				data : {
+					'taskID' : taskID,
+					'taskName' : name,
+					'taskDescription' : description
+				},
+				success : function(response) {
+
+					console.log(response);
+					
+					if (response.task) {
+						loadProjectDetails(response.task.projectID);
+					} else {
+						//show and error
+					}
+
+				}
+			});
+			
 		});
 
 	});
