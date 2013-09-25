@@ -140,6 +140,7 @@
 }
 
 .project-submit-name, .project-submit-description {
+	display: block;
 	width: 650px;
 }
 
