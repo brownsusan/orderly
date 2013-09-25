@@ -264,6 +264,7 @@
 	        });
 
 	        $('#account_save').click(function () {
+	        	
 	            $('#header_account_display').show();
 	            $('#header_account_edit').hide();
 
@@ -273,7 +274,6 @@
 	            var email = $('#account_edit_email').val();
 	            var pass = $('#account_edit_pass').val();
 	            var confirmPass = $('#account_edit_confirmPass').val();
-
 
 	            // validate the variable
 	            var valid = true;
@@ -305,9 +305,9 @@
 	            }
 
 	            if (!valid) {
+	            	console.log("invalid");
 	                return;
 	            }
-
 
 	            $.ajax({
 	                url: "xhr/update_user.php",
