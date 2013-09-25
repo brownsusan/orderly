@@ -269,17 +269,18 @@
 }
 
 .button-status {
+	background: #e6e6e6;
+	background: -moz-linear-gradient(top, #e6e6e6 40%, #d4d4d4 100%);
+	background: -webkit-linear-gradient(top, #e6e6e6 40%, #d4d4d4 100%);
+	background: -o-linear-gradient(top, #e6e6e6 40%, #d4d4d4 100%);
+	background: -ms-linear-gradient(top, #e6e6e6 40%, #d4d4d4 100%);
+	background: linear-gradient(to bottom, #e6e6e6 40%, #d4d4d4 100%);
+	border: 1px solid #f0f0f0;
 	display: block;
 	padding: 0;
 	position: relative;
 	height: 30px;
 	width: 200px;
-	background: #e6e6e6;
-	background: -moz-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
-	background: -webkit-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
-	background: -o-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
-	background: -ms-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
-	background: linear-gradient(to bottom, #e6e6e6 0%, #d4d4d4 100%);
 }
 
 .button-status .status {
