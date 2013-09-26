@@ -362,7 +362,7 @@ function loadApplication() {
 			console.log(projectID);
 
 			$('.project-detail-container').hide();
-			$('.project-submit-container').show();
+			$('.project-edit-container').show();
 
 		});
 		
@@ -398,18 +398,18 @@ function loadApplication() {
 
 		});
 
-		$(document).on('click', '.project-submit-save', function(e) {
+		$(document).on('click', '.project-edit-save', function(e) {
 
 			var projectContainer = $(this).closest('.project-container');
 			var projectID = projectContainer.find('.data-id').val();
 
 			$('.project-detail-container').show();
-			$('.project-submit-container').hide();
+			$('.project-edit-container').hide();
 
 			//make variables
-			var name = projectContainer.find('.project-submit-name').val();
-			var description = projectContainer.find('.project-submit-description').val();
-			var dueDate = projectContainer.find('.project-submit-date').val();
+			var name = projectContainer.find('.project-edit-name').val();
+			var description = projectContainer.find('.project-edit-description').val();
+			var dueDate = projectContainer.find('.project-edit-date').val();
 
 			//validate variables
 
@@ -444,7 +444,7 @@ function loadApplication() {
 				return;
 			}
 
-			$(this).find('.task-submit').hide();
+			$(this).find('.task-edit').hide();
 			$(this).find('.task-detail').show();
 
 		});
@@ -486,20 +486,20 @@ function loadApplication() {
 		
 		$(document).on('click', '.task-item-edit', function(e) {
 
-			$(this).closest('.task-item').find('.task-submit').show();
+			$(this).closest('.task-item').find('.task-edit').show();
 			$(this).closest('.task-item').find('.task-detail').hide();
 
 		});
 		
-		$(document).on('click', '.task-submit-save', function(e) {
+		$(document).on('click', '.task-edit-save', function(e) {
 			
 			var taskContainer = $(this).closest('.task-item');
 			var taskID = taskContainer.find('.data-id').val();
 
 			//make variables
-			var name = taskContainer.find('.task-submit-name').val();
-			var description = taskContainer.find('.task-submit-description').val();
-			var dueDate = taskContainer.find('.task-submit-date').val();
+			var name = taskContainer.find('.task-edit-name').val();
+			var description = taskContainer.find('.task-edit-description').val();
+			var dueDate = taskContainer.find('.task-edit-date').val();
 			
 			//validate variables
 
@@ -567,7 +567,7 @@ function loadProjects() {
 
 function loadProjectDetails(projectID) {
 
-	var projectSubmit = $(applicationTemplate).find('#application-project-submit').html();
+	var projectSubmit = $(applicationTemplate).find('#application-project-edit').html();
 	var projectDetail = $(applicationTemplate).find('#application-project-detail').html();
 
 	var taskItem = $(applicationTemplate).find('#application-task-item').html();
@@ -594,8 +594,8 @@ function loadProjectDetails(projectID) {
 			var projectDetailHtml = $.render(response.projects[0], 'projectDetailTemplate');
 			$('#main').append(projectDetailHtml);
 			
-			var newTaskButton = '<button id="application_create_task">New Task</button>';
-			$(newTaskButton).appendTo('#main');
+			var taskListHeading = '<div class="task-list-heading"><div class="content-spacer"></div><span>Tasks for '+response.projects[0].projectName+'</span><button id="application_create_task">New Task</button></div>';
+			$(taskListHeading).appendTo('#main');
 
 			$.ajax({
 				url : "xhr/get_tasks.php",

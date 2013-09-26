@@ -66,12 +66,12 @@
 	</script><!-- header template close -->
 	
 	
-	<script type="text/template" id="application-project-submit">
-		<div class="project-submit-container project-container hidden">
+	<script type="text/template" id="application-project-create">
+		<div class="project-create-container project-container hidden">
 			<input type="hidden" class="data-id" value="{{=id}}" />
-			<div class="project-submit-heading">
+			<div class="project-create-heading">
 				<div class="status {{=status}}"></div>
-				<span class="project-submit-title">{{=projectName}}</span>
+				<span class="project-create-title">{{=projectName}}</span>
 				<span class="icon-delete project-delete"></span>
 			</div>
 	
@@ -81,13 +81,13 @@
 	
 					<span>Project Name</span>
 					<br />
-					<input type="text" class="project-submit-name" value="{{=projectName}}"/>
+					<input type="text" class="project-create-name" value="{{=projectName}}"/>
 	
 					<div class="content-spacer"></div>
 	
 					<span>Project Description</span>
 					<br />
-					<textarea class="project-submit-description">{{=projectDescription}}</textarea>																																																																															
+					<textarea class="project-create-description">{{=projectDescription}}</textarea>																																																																															
 	
 				</div>
 	
@@ -95,7 +95,7 @@
 	
 					<span>Due Date</span>
 					<br />
-					<input type="text" class="project-submit-date" value="{{=dueDate}}"/>
+					<input type="text" class="project-create-date" value="{{=dueDate}}"/>
 	
 					<div class="content-spacer"></div>
 	
@@ -121,7 +121,73 @@
 				</div>
 	
 				<div class="clear"></div>
-				<button class="project-submit-save">
+				<button class="project-create-save">
+					Submit
+				</button>
+				<div class="clear"></div>
+	
+			</div>
+
+		</div>
+	</script><!-- End Project Create Template -->
+	
+	
+	<script type="text/template" id="application-project-edit">
+		<div class="project-edit-container project-container hidden">
+			<input type="hidden" class="data-id" value="{{=id}}" />
+			<div class="project-edit-heading">
+				<div class="status {{=status}}"></div>
+				<span class="project-edit-title">{{=projectName}}</span>
+				<span class="icon-delete project-delete"></span>
+			</div>
+	
+			<div class="padding">
+	
+				<div class="left">
+	
+					<span>Project Name</span>
+					<br />
+					<input type="text" class="project-edit-name" value="{{=projectName}}"/>
+	
+					<div class="content-spacer"></div>
+	
+					<span>Project Description</span>
+					<br />
+					<textarea class="project-edit-description">{{=projectDescription}}</textarea>																																																																															
+	
+				</div>
+	
+				<div class="right">
+	
+					<span>Due Date</span>
+					<br />
+					<input type="text" class="project-edit-date" value="{{=dueDate}}"/>
+	
+					<div class="content-spacer"></div>
+	
+					<span>Status</span>
+					<br />
+					<button class="button-status">
+						<div class="status active"></div>
+						<span>Active</span>
+					</button>
+					<button class="button-status">
+						<div class="status urgent"></div>
+						<span>Urgent</span>
+					</button>
+					<button class="button-status">
+						<div class="status delayed"></div>
+						<span>Delayed</span>
+					</button>
+					<button class="button-status">
+						<div class="status done"></div>
+						<span>Done</span>
+					</button>
+	
+				</div>
+	
+				<div class="clear"></div>
+				<button class="project-edit-save">
 					Save
 				</button>
 				<div class="clear"></div>
@@ -129,7 +195,7 @@
 			</div>
 
 		</div>
-	</script><!-- End Project Submit Template -->
+	</script><!-- End Project Edit Template -->
 	
 	
 	<script type="text/template" id="application-project-detail">
@@ -199,49 +265,41 @@
 		<div class="project-item">
 			<input type="hidden" class="data-id" value="{{=id}}" />
 			<div class="status {{=status}}"></div>
-			<span class="project-name">{{=projectName}}</span>
+			<span class="project-name bold">{{=projectName}}</span>
 			<span class="icon-delete project-item-delete"></span>
 		</div>
 	</script><!-- End Project Item Template-->
 	
+	
+	<div class="center-parent hidden task-edit">
 
-	<script type="text/template" id="application-task-item">
-		<div class="task-item">
-			<input type="hidden" class="data-id" value="{{=id}}" />
-			<div class="status {{=status}}"></div>
-			<span class="task-name">{{=taskName}}</span>
-			<span class="icon-delete task-item-delete"></span>
-			<span class="icon-edit task-item-edit"></span>
-			
-			<div class="center-parent hidden task-submit">
-
-				<div class="task-submit-container center-child task-container">
+				<div class="task-create-container center-child task-container">
 	
 					<div class="padding">
 	
 						<div class="left">
 	
-							<span>Task Name</span>
+							<span class="bold">Task Name</span>
 							<br />
-							<input type="text" class="task-submit-name" value="{{=taskName}}" />
+							<input type="text" class="task-create-name" value="{{=taskName}}" />
 	
 							<div class="content-spacer"></div>
 	
-							<span>Task Description</span>
+							<span class="bold">Task Description</span>
 							<br />
-							<textarea class="task-submit-description">{{=taskDescription}}</textarea>																																																																																					
+							<textarea class="task-create-description">{{=taskDescription}}</textarea>																																																																																					
 	
 						</div>
 	
 						<div class="right">
 	
-							<span>Due Date</span>
+							<span class="bold">Due Date</span>
 							<br />
-							<input type="text" class="task-submit-date" value="{{=dueDate}}" />
+							<input type="text" class="task-create-date" value="{{=dueDate}}" />
 	
 							<div class="content-spacer"></div>
 	
-							<span>Status</span>
+							<span class="bold">Status</span>
 							<br />
 							<button class="button-status">
 								<div class="status active"></div>
@@ -263,7 +321,78 @@
 						</div>
 	
 						<div class="clear"></div>
-						<button class="task-submit-save">
+						<button class="task-create-save">
+							Submit
+						</button>
+						<div class="clear"></div>
+	
+					</div>
+	
+				</div>
+	
+			</div><!-- End Task Create -->
+
+	
+
+	<script type="text/template" id="application-task-item">
+		<div class="task-item">
+			<input type="hidden" class="data-id" value="{{=id}}" />
+			<div class="status {{=status}}"></div>
+			<span class="task-name bold">{{=taskName}}</span>
+			<span class="icon-delete task-item-delete"></span>
+			<span class="icon-edit task-item-edit"></span>
+			
+			<div class="center-parent hidden task-edit">
+
+				<div class="task-edit-container center-child task-container">
+	
+					<div class="padding">
+	
+						<div class="left">
+	
+							<span class="bold">Task Name</span>
+							<br />
+							<input type="text" class="task-edit-name" value="{{=taskName}}" />
+	
+							<div class="content-spacer"></div>
+	
+							<span class="bold">Task Description</span>
+							<br />
+							<textarea class="task-edit-description">{{=taskDescription}}</textarea>																																																																																					
+	
+						</div>
+	
+						<div class="right">
+	
+							<span class="bold">Due Date</span>
+							<br />
+							<input type="text" class="task-edit-date" value="{{=dueDate}}" />
+	
+							<div class="content-spacer"></div>
+	
+							<span class="bold">Status</span>
+							<br />
+							<button class="button-status">
+								<div class="status active"></div>
+								<span>Active</span>
+							</button>
+							<button class="button-status">
+								<div class="status urgent"></div>
+								<span>Urgent</span>
+							</button>
+							<button class="button-status">
+								<div class="status delayed"></div>
+								<span>Delayed</span>
+							</button>
+							<button class="button-status">
+								<div class="status done"></div>
+								<span>Done</span>
+							</button>
+	
+						</div>
+	
+						<div class="clear"></div>
+						<button class="task-edit-save">
 							Save
 						</button>
 						<div class="clear"></div>
@@ -272,11 +401,11 @@
 	
 				</div>
 	
-			</div>
+			</div><!-- End Task Edit -->
 			
 			<div class="center-parent hidden task-detail">
 	
-				<div class="task-submit-container center-child task-container">
+				<div class="task-detail-container center-child task-container">
 	
 					<div class="padding">
 	
@@ -284,14 +413,14 @@
 	
 							<span class="bold">Task Name</span>
 							<br />
-							<span type="text" class="task-submit-name">{{=taskName}}</span>
+							<span type="text" class="task-detail-name">{{=taskName}}</span>
 	
 	
 							<div class="content-spacer"></div>
 	
 							<span class="bold">Task Description</span>
 							<br />
-							<span class="task-submit-description">{{=taskDescription}}</span>																																																																																					
+							<span class="task-detail-description">{{=taskDescription}}</span>																																																																																					
 	
 						</div>
 	
@@ -299,7 +428,7 @@
 	
 							<span class="bold">Due Date</span>
 							<br />
-							<span type="text" class="task-submit-date">{{=dueDate}}</span>
+							<span type="text" class="task-detail-date">{{=dueDate}}</span>
 	
 							<div class="content-spacer"></div>
 	
