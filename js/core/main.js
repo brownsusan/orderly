@@ -449,6 +449,41 @@ function loadApplication() {
 
 		});
 		
+		$(document).on('click', '.task-item-delete', function(e) {
+		
+			var _this = this;
+		
+			var answer = confirm("Are you sure you want to delete this task?");
+
+			if (answer) {
+
+				var taskID = $(this).closest('.task-item').find('.data-id').val();
+
+				$.ajax({
+					url : "xhr/delete_task.php",
+					type : "post",
+					dataType : "json",
+					data : {
+						'taskID' : taskID
+					},
+					success : function(response) {
+
+						console.log(response);
+						if (response.success) {
+							$(_this).closest('.task-item').remove();
+						} else {
+							//show and error
+						}
+
+					}
+				});
+
+			}
+			
+		});
+		
+		
+		
 		$(document).on('click', '.task-item-edit', function(e) {
 
 			$(this).closest('.task-item').find('.task-submit').show();
@@ -493,6 +528,7 @@ function loadApplication() {
 			
 		});
 
+		
 	});
 	//end get template function
 
