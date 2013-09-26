@@ -70,8 +70,7 @@
 		<div class="project-create-container project-container hidden">
 			<input type="hidden" class="data-id" value="{{=id}}" />
 			<div class="project-create-heading">
-				<div class="status {{=status}}"></div>
-				<span class="project-create-title">{{=projectName}}</span>
+				<span class="project-create-title">New Project</span>
 				<span class="icon-delete project-delete"></span>
 			</div>
 	
@@ -271,7 +270,11 @@
 	</script><!-- End Project Item Template-->
 	
 	
-	<div class="center-parent hidden task-edit">
+	
+	<script type="text/template" id="application-task-create">
+		<span class="task-name bold">New Task</span>
+			
+		<div class="center-parent hidden task-edit">
 
 				<div class="task-create-container center-child task-container">
 	
@@ -331,6 +334,7 @@
 				</div>
 	
 			</div><!-- End Task Create -->
+	</script>
 
 	
 
