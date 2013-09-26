@@ -542,9 +542,9 @@ function loadProjects() {
 	// clear the main
 	$('#main').html('<br />');
 
-	var newProjectButton = '<button id="application_create" class="button-submit">New Project</button>';
-
+	var newProjectButton = '<button id="application_create_project">New Project</button>';
 	$(newProjectButton).appendTo('#main');
+	
 
 	$.ajax({
 		url : "xhr/get_projects.php",
@@ -558,6 +558,10 @@ function loadProjects() {
 			}
 
 		}
+	});
+	
+	$('#application_create_project').click(function(){
+		
 	});
 }
 
@@ -589,6 +593,9 @@ function loadProjectDetails(projectID) {
 
 			var projectDetailHtml = $.render(response.projects[0], 'projectDetailTemplate');
 			$('#main').append(projectDetailHtml);
+			
+			var newTaskButton = '<button id="application_create_task">New Task</button>';
+			$(newTaskButton).appendTo('#main');
 
 			$.ajax({
 				url : "xhr/get_tasks.php",
