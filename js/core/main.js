@@ -470,7 +470,9 @@ function loadApplication() {
 
 						console.log(response);
 						if (response.success) {
-							$(_this).closest('.task-item').remove();
+							$(_this).closest('.task-item').slideUp('fast', function(){
+								$(this).remove();
+							});
 						} else {
 							//show and error
 						}
@@ -481,8 +483,6 @@ function loadApplication() {
 			}
 			
 		});
-		
-		
 		
 		$(document).on('click', '.task-item-edit', function(e) {
 
@@ -528,7 +528,6 @@ function loadApplication() {
 			
 		});
 
-		
 	});
 	//end get template function
 
