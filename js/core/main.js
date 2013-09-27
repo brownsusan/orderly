@@ -311,10 +311,22 @@
 	
 			});
 			
+			
+			
+			
+			
+			
+			
+			
 			$(document).on('click', '#application_create_project', function(e) {
+			console.log('dick');
 				//get template
+				
+				var projectCreate = $(applicationTemplate).find('#application-project-create').html();
 				//append to the html
+				$(projectCreate).appendTo('#main');
 	
+/*
 				//make variables
 				var name = ;
 				var status = ;
@@ -322,7 +334,7 @@
 				var date = ;
 				//validate variables
 	
-/*
+
 				//ajax request
 				$.ajax({
 					url : "xhr/new_project.php",
@@ -345,11 +357,17 @@
 	
 					}
 				});
-*/
+
 	
 			});
+*/
 
 			});
+			
+			
+			
+			
+			
 	
 			$(document).on('click', '.project-item', function(e) {
 	
