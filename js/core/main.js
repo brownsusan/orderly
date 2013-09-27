@@ -327,43 +327,53 @@
 				
 				//append to the html
 				$('#main').prepend(projectCreate);	
-/*
-				//make variables
-				var name = ;
-				var status = ;
-				var description = ;
-				var date = ;
-				//validate variables
+				//hide the project create button
+				$('#application_create_project').hide();
+				
+				//Add an event listener ot the save button
+				$('.project-create-save').click(function(){
+				console.log('save');
+					//make variables
+					var name = $('.project-create-name').val();
+					var status = $('.project-create-status').val();
+					var description = $('.project-create-description').val();
+					var date = $('project-create-date').val();
+					var status = 'active';
+					//validate variables
 	
 
-				//ajax request
-				$.ajax({
-					url : "xhr/new_project.php",
-					type : "post",
-					dataType : "json",
-					data : {
-						'projectName' : name,
-						'status' : status,
-						'projectDescription' : description,
-						'dueDate' : date
-					},
-					success : function(response) {
+					//ajax request
+					$.ajax({
+						url : "xhr/new_project.php",
+						type : "post",
+						dataType : "json",
+						data : {
+							'projectName': name,
+							'status': status,
+							'projectDescription': description,
+							'dueDate': date
+							},
+							success : function(response) {
+						
+								console.log(response);
+								if (response) {
+									console.log(response);
+									loadApplication();
+								} else {
+								//show an error
+							}
 	
-						console.log(response);
-						if (response) {
-							loadApplication();
-						} else {
-							//show and error
 						}
-	
-					}
+					});
+
+					});
+					
+					//Add an event listener to the x button
+					//Run load application aagin
 				});
 
-	
-			});
-*/
 
-			});
+/* 			}); */
 			
 			
 			
