@@ -319,11 +319,14 @@
 			
 			
 			$(document).on('click', '#application_create_project', function(e) {
-			console.log('dick');
+				
+				$('.project-create-container').remove();
+				
 				//get template
 				var projectCreate = $(applicationTemplate).find('#application-project-create').html();
+				
 				//append to the html
-				$(projectCreate).appendTo('#main');	
+				$('#main').prepend(projectCreate);	
 /*
 				//make variables
 				var name = ;
@@ -617,7 +620,7 @@
 		});
 		
 		$('#application_create_project').click(function(){
-			
+			console.log("test");
 		});
 	}
 	

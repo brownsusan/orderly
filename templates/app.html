@@ -67,8 +67,7 @@
 	
 	
 	<script type="text/template" id="application-project-create">
-		<div class="project-create-container project-container hidden">
-			<input type="hidden" class="data-id" value="{{=id}}" />
+		<div class="project-create-container project-container">
 			<div class="project-create-heading">
 				<span class="project-create-title">New Project</span>
 				<span class="icon-delete project-delete"></span>
@@ -80,13 +79,13 @@
 	
 					<span>Project Name</span>
 					<br />
-					<input type="text" class="project-create-name" value="{{=projectName}}"/>
+					<input type="text" class="project-create-name"/>
 	
 					<div class="content-spacer"></div>
 	
 					<span>Project Description</span>
 					<br />
-					<textarea class="project-create-description">{{=projectDescription}}</textarea>																																																																															
+					<textarea class="project-create-description"></textarea>																																																																															
 	
 				</div>
 	
@@ -94,7 +93,7 @@
 	
 					<span>Due Date</span>
 					<br />
-					<input type="text" class="project-create-date" value="{{=dueDate}}"/>
+					<input type="text" class="project-create-date"/>
 	
 					<div class="content-spacer"></div>
 	

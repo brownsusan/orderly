@@ -123,7 +123,7 @@
 /** Project */
 
 /* Project Create AND Edit */
-.project-edit-container, .project-detail-container {
+.project-create-container, .project-edit-container, .project-detail-container {
 	background: #f0f0f0;
 	box-shadow: 0 0.2em 0.35em rgba(0, 0, 0, 0.4);
 	text-align: left;
@@ -132,7 +132,7 @@
 	line-height: 1.5em;
 }
 
-.project-edit-heading, .project-detail-heading {
+.project-create-heading, .project-edit-heading, .project-detail-heading {
 	background: #e6e6e6;
 	background: -moz-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
 	background: -webkit-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
@@ -143,21 +143,21 @@
 	width: 100%;
 }
 
-.project-edit-title, .project-detail-title {
+.project-create-title, .project-edit-title, .project-detail-title {
 	font-weight: bold;
 	margin-left: 20px;
 }
 
-.project-edit-name, .project-edit-description, .project-detail-name, .project-detail-description {
+.project-create-name, .project-create-description, .project-edit-name, .project-edit-description, .project-detail-name, .project-detail-description {
 	display: block;
-	width: 650px;
+	width: 630px;
 }
 
-.project-edit-description, .project-detail-description {
+.project-create-description, .project-edit-description, .project-detail-description {
 	height: 115px;
 }
 
-.project-edit-date, .project-detail-date {
+.project-create-date, .project-edit-date, .project-detail-date {
 	width: 196px;
 }
 /* End Project Create AND Edit */
