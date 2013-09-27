@@ -321,11 +321,9 @@
 			$(document).on('click', '#application_create_project', function(e) {
 			console.log('dick');
 				//get template
-				
 				var projectCreate = $(applicationTemplate).find('#application-project-create').html();
 				//append to the html
-				$(projectCreate).appendTo('#main');
-	
+				$(projectCreate).appendTo('#main');	
 /*
 				//make variables
 				var name = ;
