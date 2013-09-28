@@ -335,7 +335,7 @@ function loadApplication() {
 				var status = $('.project-create-status').val();
 				var description = $('.project-create-description').val();
 				var date = $('project-create-date').val();
-				var status = $(this).closest('.project-create-container').find('.data-status').val(status);
+				var status = $(this).closest('.project-create-container').find('.data-status').val();
 				//validate variables
 
 				//ajax request
