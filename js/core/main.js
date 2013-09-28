@@ -110,7 +110,8 @@
 	
 						// if the user did not log in
 						else {
-							// show error
+							var errorHtml = '<span class="error-login">An error has occured, please try again.</span>';
+	                        $(errorHtml).insertAfter('.header-login');
 						}
 	
 					}
