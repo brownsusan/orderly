@@ -1,3 +1,5 @@
+/* One of my three choices for optional feautres was manage account which the api does not actually support, passwords and usernames can not be edited so I left it implemented and designed but not functioning*/	
+	
 	var landingTemplate;
 	var applicationTemplate;
 	var user;
