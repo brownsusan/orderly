@@ -105,7 +105,7 @@
 						// if the user logged in
 						if (response.user) {
 							user = response.user;
-							loadApplication();
+							init();
 						}
 	
 						// if the user did not log in
@@ -186,7 +186,7 @@
 	
 						// if the user signed up
 						if (response.user) {
-	
+							loadApplication();
 						}
 	
 						// if the user did not sign up
