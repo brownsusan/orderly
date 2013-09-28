@@ -671,13 +671,12 @@ function loadApplication() {
 	});
 
 	// for tasks create
-	// ignore that we are using project-create-container
-	$(document).on('click', '.project-create-container .button-status', function() {
+	$(document).on('click', '.task-create-container .button-status', function() {
 
 		status = $(this).find('.status').val();
 
-		$(this).closest('.project-create-container').find('.status:first').removeClass('active urgent delayed done');
-		$(this).closest('.project-create-container').find('.status:first').addClass(status);
+		$(this).closest('.task-create-container').find('.status:first').removeClass('active urgent delayed done');
+		$(this).closest('.task-create-container').find('.status:first').addClass(status);
 
 		console.log(status);
 

@@ -190,6 +190,16 @@
 	line-height: 1.5em;
 }
 
+.task-create-container {
+	width: 95%;
+	margin: 0 auto;
+	box-shadow: 0 0.2em 0.35em rgba(0, 0, 0, 0.4);
+}
+
+.task-container {
+	text-align: left;
+}
+
 .task-edit-heading, .task-create-heading {
 	background: #e6e6e6;
 	background: -moz-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
