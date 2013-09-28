@@ -183,14 +183,14 @@
 
 /** Task */
 /* Task Create AND Edit */
-.task-edit-container, .task-detail-container {
+.task-edit-container, .task-detail-container, .task-create-container {
 	background: #f0f0f0;
 	text-align: left;
 	position: relative;
 	line-height: 1.5em;
 }
 
-.task-edit-heading {
+.task-edit-heading, .task-create-heading {
 	background: #e6e6e6;
 	background: -moz-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
 	background: -webkit-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
@@ -206,11 +206,11 @@
 	margin-left: 20px;
 }
 
-.task-edit-name, .task-edit-description, .task-detail-name, .task-detail-description {
+.task-edit-name, .task-edit-description, .task-detail-name, .task-detail-description, .task-create-name, .task-create-description {
 	width: 600px;
 }
 
-.task-edit-description, .task-detail-description {
+.task-edit-description, .task-detail-description, .task-create-description {
 	display: block;
 	height: 115px;
 }
@@ -220,7 +220,7 @@
 }
 /* End Task Create AND Edit */
 
-.task-item {
+.task-item, task {
 	background: #e6e6e6;
 	background: -moz-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);
 	background: -webkit-linear-gradient(top, #e6e6e6 0%, #d4d4d4 100%);

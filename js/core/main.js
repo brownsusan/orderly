@@ -710,7 +710,7 @@
 	            var projectDetailHtml = $.render(response.projects[0], 'projectDetailTemplate');
 	            $('#main').append(projectDetailHtml);
 
-	            var taskListHeading = '<div class="task-list-heading"><div class="content-spacer"></div><span>Tasks for ' + response.projects[0].projectName + '</span><button id="application_create_task">New Task</button></div>';
+	            var taskListHeading = '<div class="task-list-heading"><div class="content-spacer"></div><span>Tasks for ' + response.projects[0].projectName + '</span><button id="application_create_task">New Task</button><div class="content-spacer"></div></div>';
 	            $(taskListHeading).appendTo('#main');
 
 	            $.ajax({
