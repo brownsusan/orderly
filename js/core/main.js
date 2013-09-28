@@ -1,7 +1,6 @@
 var landingTemplate;
 var applicationTemplate;
 var user;
-var status;
 
 $.ajaxSetup({
 	cache : false
@@ -388,7 +387,7 @@ function loadApplication() {
 				var status = $('.task-create-status').val();
 				var description = $('.task-create-description').val();
 				var date = $('task-create-date').val();
-				var status = 'active';
+				var status = $(this).closest('.task-create-container').find('.data-status').val();
 				//validate variables
 				console.log(projectID);
 
@@ -642,7 +641,19 @@ function loadApplication() {
 	});
 	//end get template function
 
-	// for projects
+	// for tasks create
+	$(document).on('click', '.project-create-container .button-status', function() {
+
+		var status = $(this).find('.status').val();
+
+		$(this).closest('.project-create-container').find('.status:first').removeClass('active urgent delayed done');
+		$(this).closest('.project-create-container').find('.status:first').addClass(status);
+
+		$(this).closest('.project-create-container').find('.data-status').val(status);
+
+	});
+
+	// for projects edits
 	$(document).on('click', '.project-container .button-status', function() {
 
 		var status = $(this).find('.status').val();
@@ -673,16 +684,16 @@ function loadApplication() {
 	// for tasks create
 	$(document).on('click', '.task-create-container .button-status', function() {
 
-		status = $(this).find('.status').val();
+		var status = $(this).find('.status').val();
 
 		$(this).closest('.task-create-container').find('.status:first').removeClass('active urgent delayed done');
 		$(this).closest('.task-create-container').find('.status:first').addClass(status);
 
-		console.log(status);
+		$(this).closest('.task-create-container').find('.data-status').val(status);
 
 	});
 
-	// for task items
+	// for task edits
 	$(document).on('click', '.task-item .button-status', function() {
 
 		var status = $(this).find('.status').val();

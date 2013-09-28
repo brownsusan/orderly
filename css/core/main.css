@@ -225,7 +225,7 @@ margin-left: 20px;
 	height: 115px;
 }
 
-.task-edit-date {
+.task-edit-date, .task-create-date {
 	width: 196px;
 }
 /* End Task Create AND Edit */
