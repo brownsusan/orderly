@@ -324,6 +324,7 @@ function loadApplication() {
 
 			//append to the html
 			$('#main').prepend(projectCreate);
+			$('#main').prepend('<br />');
 			//hide the project create button
 			$('#application_create_project').hide();
 
@@ -654,7 +655,7 @@ function loadApplication() {
 	});
 
 	// for projects edits
-	$(document).on('click', '.project-container .button-status', function() {
+	$(document).on('click', '.project-edit-container .button-status, .project-detail-container .button-status', function() {
 
 		var status = $(this).find('.status').val();
 
