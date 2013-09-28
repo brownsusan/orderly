@@ -14,9 +14,9 @@
 
 #application_create_project {
 	margin-left: 89%;
-/* 	margin-right: 2.5%; */
-/* 	float: right; */
-/* 	clear: both; */
+	/* 	margin-right: 2.5%; */
+	/* 	float: right; */
+	/* 	clear: both; */
 }
 
 .header-home {
@@ -202,8 +202,8 @@
 }
 
 .task-edit-title, {
-	font-weight: bold;
-	margin-left: 20px;
+font-weight: bold;
+margin-left: 20px;
 }
 
 .task-edit-name, .task-edit-description, .task-detail-name, .task-detail-description, .task-create-name, .task-create-description {
@@ -219,6 +219,15 @@
 	width: 196px;
 }
 /* End Task Create AND Edit */
+
+.task-list-heading {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.task-list-heading button {
+	float: right;
+}
 
 .task-item, task {
 	background: #e6e6e6;
