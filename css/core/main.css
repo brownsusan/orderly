@@ -43,13 +43,26 @@
 }
 
 #header_account {
-	background: #ff00ff;
-	width: 400px;
-	height: 300px;
+	background: #e6e6e6;
+	width: 305px;
+	height: 275px;
 	position: absolute;
 	top: 45px;
 	right: 5px;
 	display: none;
+	border: 1px solid #999;
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+	text-align: left;
+	padding: 40px;
+}
+
+#header_account input {
+	float: right;
+}
+
+#header_account span {
+	width: 160px;
+	float: right;
 }
 
 #header_account_edit {
