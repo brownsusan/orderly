@@ -72,7 +72,9 @@
 	
 	<script type="text/template" id="application-project-create">
 		<div class="project-create-container project-container">
+			<input type="hidden" class="data-status" value="active" />
 			<div class="project-create-heading">
+				<div class="status active"></div>
 				<span class="project-create-title">New Project</span>
 				<span id = "project_cancel" class="icon-delete"></span>
 			</div>
@@ -288,6 +290,7 @@
 	
 	<script type="text/template" id="application-task-create">
 	<div class="task-create-container">
+		<input type="hidden" class="data-status" value="active" />
 		<div class="task-create-heading">
 			<div class="status active"></div>
 			<span class="task-name bold">New Task</span>
