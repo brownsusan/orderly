@@ -38,7 +38,7 @@ init();
 function loadLanding() {
 
 	// create all the page elements
-	$.get("templates/landing.html?2", function(template) {
+	$.get("templates/landing.html", function(template) {
 
 		landingTemplate = template;
 
@@ -198,9 +198,7 @@ function loadLanding() {
 function loadApplication() {
 
 	// create all the page elements
-	//?2 is for forcing it to reload - remove before submitting - clear cache to remove the need to reload
-	//HACK
-	$.get("templates/app.html?6", function(template) {
+	$.get("templates/app.html", function(template) {
 		applicationTemplate = template;
 
 		var header = $(applicationTemplate).find('#application-header').html();
