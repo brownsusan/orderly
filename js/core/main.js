@@ -368,8 +368,9 @@
 
 					});
 					
-					//Add an event listener to the x button
-					//Run load application aagin
+					$('#project_cancel').click(function(){
+						loadApplication();
+					});
 				});
 
 
