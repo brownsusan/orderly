@@ -326,6 +326,8 @@ function loadApplication() {
 			//hide the project create button
 			$('#application_create_project').hide();
 
+			setupDatepicker();
+
 			//Add an event listener ot the save button
 			$('.project-create-save').click(function() {
 				console.log('save');
@@ -376,6 +378,8 @@ function loadApplication() {
 			//append to the html
 			$(taskCreate).insertAfter('.task-list-heading');
 			//hide the project create button
+
+			setupDatepicker();
 
 			//Add an event listener ot the save button
 			$('.task-create-save').click(function() {
@@ -741,7 +745,7 @@ function loadProjects() {
 				var projectItemHtml = $.render(response.projects[i], 'projectItemTemplate');
 				$('#main').append(projectItemHtml);
 			}
-
+			
 		}
 	});
 
@@ -797,6 +801,8 @@ function loadProjectDetails(projectID) {
 						$('#main').append(taskItemHtml);
 					}
 
+					setupDatepicker();
+
 				}
 			});
 
@@ -804,3 +810,8 @@ function loadProjectDetails(projectID) {
 	});
 
 }
+
+function setupDatepicker() {
+	$('.project-create-date, .project-edit-date, .task-edit-date, .task-create-date').datepicker();
+}
+
