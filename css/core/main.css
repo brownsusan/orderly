@@ -14,9 +14,15 @@
 
 #application_create_project {
 	margin-left: 89%;
-	/* 	margin-right: 2.5%; */
-	/* 	float: right; */
-	/* 	clear: both; */
+}
+
+.cta{
+	font-size: 20px;
+	background: #9ac67f;
+	border-radius: 2px;
+	font-weight: bold;
+	padding: 15px;
+	white-space: nowrap;
 }
 
 .error-title, .error-login, .error-signup{

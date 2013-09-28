@@ -68,6 +68,7 @@ input[type=submit], .button-submit {
 	background: -webkit-linear-gradient(top, #c0eba5 18%, #88a675 100%);
 	background: linear-gradient(to bottom, #c0eba5 18%, #88a675 100%);
 	border-radius: 2px;
+	border: none;
 	color: #444;
 	cursor: pointer;
 	font-weight: bold;
