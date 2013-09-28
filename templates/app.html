@@ -272,8 +272,9 @@
 	
 	<script type="text/template" id="application-task-create">
 		<span class="task-name bold">New Task</span>
+		<span id="task_cancel" class="icon-delete"></span>
 			
-		<div class="center-parent hidden task-edit">
+		<div class="center-parent task-edit">
 
 				<div class="task-create-container center-child task-container">
 	
@@ -283,13 +284,13 @@
 	
 							<span class="bold">Task Name</span>
 							<br />
-							<input type="text" class="task-create-name" value="{{=taskName}}" />
+							<input type="text" class="task-create-name" placeholder="Enter Task Name Here" />
 	
 							<div class="content-spacer"></div>
 	
 							<span class="bold">Task Description</span>
 							<br />
-							<textarea class="task-create-description">{{=taskDescription}}</textarea>																																																																																					
+							<textarea class="task-create-description" placeholder="Enter Task Description Here"></textarea>																																																																																					
 	
 						</div>
 	
@@ -297,7 +298,7 @@
 	
 							<span class="bold">Due Date</span>
 							<br />
-							<input type="text" class="task-create-date" value="{{=dueDate}}" />
+							<input type="text" class="task-create-date" placeholder="Enter Due Date Here" />
 	
 							<div class="content-spacer"></div>
 	
