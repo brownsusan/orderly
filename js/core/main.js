@@ -335,7 +335,7 @@ function loadApplication() {
 				var name = $('.project-create-name').val();
 				var status = $('.project-create-status').val();
 				var description = $('.project-create-description').val();
-				var date = $('project-create-date').val();
+				var date = $('.project-create-date').val();
 				var status = $(this).closest('.project-create-container').find('.data-status').val();
 				//validate variables
 
@@ -389,7 +389,7 @@ function loadApplication() {
 				var name = $('.task-create-name').val();
 				var status = $('.task-create-status').val();
 				var description = $('.task-create-description').val();
-				var date = $('task-create-date').val();
+				var date = $('.task-create-date').val();
 				var status = $(this).closest('.task-create-container').find('.data-status').val();
 				//validate variables
 				console.log(projectID);
@@ -534,7 +534,8 @@ function loadApplication() {
 				data : {
 					'projectID' : projectID,
 					'projectName' : name,
-					'projectDescription' : description
+					'projectDescription' : description,
+					'dueDate' : dueDate
 				},
 				success : function(response) {
 
@@ -624,7 +625,8 @@ function loadApplication() {
 				data : {
 					'taskID' : taskID,
 					'taskName' : name,
-					'taskDescription' : description
+					'taskDescription' : description,
+					'dueDate' : dueDate
 				},
 				success : function(response) {
 
@@ -745,7 +747,7 @@ function loadProjects() {
 				var projectItemHtml = $.render(response.projects[i], 'projectItemTemplate');
 				$('#main').append(projectItemHtml);
 			}
-			
+
 		}
 	});
 
