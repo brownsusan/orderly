@@ -19,6 +19,15 @@
 	/* 	clear: both; */
 }
 
+.error-title, .error-login, .error-signup{
+	color: #BF1515;
+}
+
+.error-title{
+	background: none;
+	margin: 20px;
+}
+
 .header-home {
 	float: left;
 	margin-left: 20px;
@@ -65,9 +74,15 @@
 	float: right;
 }
 
+#header_account label {
+	font-weight: bold;
+}
+
 #header_account_edit {
 	display: none;
 }
+
+
 
 /** Home */
 
